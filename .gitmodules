@@ -1,0 +1,6 @@
+[submodule "submodule/color"]
+	path = submodule/color
+	url = https://github.com/dmilos/color.git
+[submodule "submodule/reflection"]
+	path = submodule/reflection
+	url = https://github.com/dmilos/reflection.git
