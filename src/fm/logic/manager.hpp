@@ -1,34 +1,49 @@
+#ifndef fm_logic_manager_pure
+#define fm_logic_manager_pure
 
 #include "reflection/object.hpp"
+
+#include "../type/size.hpp"
+
+#include "./device.hpp"
 
 namespace fileM
  {
   namespace logic
    {
+    namespace manager
+     {
 
-    class manager
-     : public ::reflection::object
-      {
-       public:
+      class pure_class
+       : public ::reflection::object_class
+        {
+         public:
 
-        typedef int device_type;
-        typedef int size_type;
-        typedef std::vector<device_type> list_type;
+          typedef ::fileM::type::size_type          size_type;
 
-        typedef std::function<void(void)> inforemer_type;
+          typedef ::fileM::logic::device::pure_class          device_type;
+          typedef ::fileM::logic::device::list_type      device_list_type;
+          typedef ::fileM::logic::manager::pure_class           this_type;
 
-                  manager(){}
-         virtual ~manager(){}
+                    pure_class()
+                     {
+                      //insert( "size",         item_type( ::reflection::property::function::member( this, &fileM::logic::device::this_type::size      ) ) );
+                      //insert( "refresh",      item_type( ::reflection::property::function::member( this, &fileM::logic::device::this_type::refresh   ) ) );
+                      //insert( "proprty-get",  item_type( ::reflection::property::function::member( this, &fileM::logic::device::this_type::property  ) ) );
+                      //insert( "proprty-set",  item_type( ::reflection::property::function::member( this, &fileM::logic::device::this_type::property  ) ) );
+                     }
 
-         void informer( inforemer_type const& );
+          virtual ~pure_class(){}
 
-        void void      size()const=0;
-        void size_type list( list_type & list, size_type const& begin, size_type const& end )const=0;
+          virtual bool         refresh()const=0;
 
-       private:
-         inforemer_type m_informer;
-      };
+          virtual void      size()const=0;
+          virtual size_type list( device_list_type & list, size_type const& begin, size_type const& end )const=0;
 
+        };
+
+
+     }
    }
  }
 

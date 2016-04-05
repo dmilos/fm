@@ -10,7 +10,7 @@ namespace fileM
    {
 
     class shortcut
-     : public virtual ::reflection::object
+     : public virtual ::reflection::object_class
      {
       public:
         shortcut(){}

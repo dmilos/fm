@@ -1,5 +1,11 @@
+#ifndef fm_logic_property
+#define fm_logic_property
+
 
 #include "reflection/object.hpp"
+
+#include "../type/size.hpp"
+#include "../type/string.hpp"
 
 namespace fileM
  {
@@ -7,26 +13,42 @@ namespace fileM
    {
 
     class property
-    : public ::reflection::object
+    : public ::reflection::object_class
      {
       public:
-       enum status_etor { ok_enum, connect_enum };
 
-       typedef int string_type;
+       typedef ::fileM::type::string_type string_type;
+       typedef ::fileM::type::size_type size_type;
 
-        property();
+       typedef ::reflection::object_class object_type;
+       typedef ::reflection::object_class* object_ptr_type;
+
+       property( object_type * parent_param )
+        :m_parent( parent_param )
+        {
+         //insert( "set",     item_type( ::reflection::property::function::member( this, &fileM::logic::property::set     ) ) );
+         //insert( "get",     item_type( ::reflection::property::function::member( this, &fileM::logic::property::get     ) ) );
+         //insert( "size",    item_type( ::reflection::property::function::member( this, &fileM::logic::property::size    ) ) );
+         //insert( "refresh", item_type( ::reflection::property::function::member( this, &fileM::logic::property::refresh ) ) );
+        }
+
        ~property();
 
-       void string_type const& set( string_type & name )const=0;
-       void bool               get( string_type & name, string_type const& value )=0;
-       void refresh()=0;
+       virtual size_type   const& size( )const=0;
+       virtual bool               set( string_type const& name )const=0;
+       // must obey value.capacity()
+       virtual size_type          get( string_type const& name, string_type & value )=0;
+       virtual void               refresh()=0;
 
-        file_type * file( void );
-        file_type * file( file_type  * const & file_param );
+      public:
+        object_ptr_type parent( void ){ return m_parent; }
       private:
-        file_type *m_file;
-
+        object_ptr_type m_parent;
      };
+
+     typedef std::map< ::fileM::type::string_type, ::fileM::logic::property > attribute_type;
 
    }
  }
+
+#endif
