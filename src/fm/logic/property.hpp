@@ -2,7 +2,7 @@
 #define fm_logic_property
 
 
-#include "reflection/object.hpp"
+#include "reflection/reflection.hpp"
 
 #include "../type/size.hpp"
 #include "../type/string.hpp"
@@ -13,15 +13,15 @@ namespace fileM
    {
 
     class property
-    : public ::reflection::object_class
+    : public ::reflection::object::structure_class
      {
       public:
 
        typedef ::fileM::type::string_type string_type;
        typedef ::fileM::type::size_type size_type;
 
-       typedef ::reflection::object_class object_type;
-       typedef ::reflection::object_class* object_ptr_type;
+       typedef ::reflection::object::structure_class object_type;
+       typedef ::reflection::object::structure_class* object_ptr_type;
 
        property( object_type * parent_param )
         :m_parent( parent_param )

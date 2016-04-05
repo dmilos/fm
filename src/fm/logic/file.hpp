@@ -4,7 +4,7 @@
 
 #include <vector>
 
-#include "reflection/object.hpp"
+#include "reflection/reflection.hpp"
 
 #include "../type/string.hpp"
 #include "../type/size.hpp"
@@ -28,7 +28,7 @@ namespace fileM
      {
 
       class pure_class
-       : public ::reflection::object_class
+       : public ::reflection::object::structure_class
        {
         public:
 
