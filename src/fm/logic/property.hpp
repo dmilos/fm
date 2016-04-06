@@ -6,24 +6,25 @@
 
 #include "../type/size.hpp"
 #include "../type/string.hpp"
+#include "../type/data.hpp"
 
 namespace fileM
  {
   namespace logic
    {
 
-    class property
+    class property_class
     : public ::reflection::object::structure_class
      {
       public:
 
-       typedef ::fileM::type::string_type string_type;
+       typedef ::fileM::type::data_type data_type;
        typedef ::fileM::type::size_type size_type;
 
        typedef ::reflection::object::structure_class object_type;
        typedef ::reflection::object::structure_class* object_ptr_type;
 
-       property( object_type * parent_param )
+       property_class( object_type * parent_param )
         :m_parent( parent_param )
         {
          //insert( "set",     item_type( ::reflection::property::function::member( this, &fileM::logic::property::set     ) ) );
@@ -32,12 +33,18 @@ namespace fileM
          //insert( "refresh", item_type( ::reflection::property::function::member( this, &fileM::logic::property::refresh ) ) );
         }
 
-       ~property();
+       ~property_class();
 
-       virtual size_type   const& size( )const=0;
-       virtual bool               set( string_type const& name )const=0;
+       virtual size_type          size( )const=0;
+
+       virtual bool               set( data_type const& data )const=0;
+
+       virtual bool               insert(  data_type const& value,  size_type const& position )const=0;
+       virtual bool               replace( data_type const& value,  size_type const& position )const=0;
+       virtual bool               erase(   size_type const& begin, size_type const& end )const=0;
+
        // must obey value.capacity()
-       virtual size_type          get( string_type const& name, string_type & value )=0;
+       virtual size_type          get( data_type & value )=0;
        virtual void               refresh()=0;
 
       public:
@@ -46,7 +53,7 @@ namespace fileM
         object_ptr_type m_parent;
      };
 
-     typedef std::map< ::fileM::type::string_type, ::fileM::logic::property > attribute_type;
+     typedef std::map< ::fileM::type::string_type, ::fileM::logic::property_class > attribute_type;
 
    }
  }

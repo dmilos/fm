@@ -1,4 +1,2 @@
-#include "./device.hpp"
-#include "./file.hpp"
-#include "./manager.hpp"
+#include "./device/device.hpp"
 #include "./property.hpp"
