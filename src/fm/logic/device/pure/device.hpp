@@ -8,7 +8,7 @@
 #include "../../../type/size.hpp"
 #include "../../../type/string.hpp"
 
-#include "../../property.hpp"
+#include "./property.hpp"
 
 #include "./file.hpp"
 
@@ -22,6 +22,8 @@ namespace fileM
       namespace pure
        {
 
+       	class manager_class;
+
         class device_class
          : public ::reflection::object::structure_class
          {
@@ -30,24 +32,28 @@ namespace fileM
             typedef ::fileM::type::size_type            size_type;
             typedef ::fileM::type::string_type        string_type;
 
-            typedef ::fileM::logic::property_class       property_type;
-            typedef ::fileM::logic::attribute_type      attribute_type;
+            typedef ::fileM::logic::device::pure::property_class  property_type;
+            typedef ::fileM::logic::device::pure::attribute_type      attribute_type;
 
             typedef ::fileM::logic::device::pure::file_class         file_type;
             typedef ::fileM::logic::device::pure::file_list_type     file_list_type;
 
+            typedef ::fileM::logic::device::pure::manager_class    manager_type;
+            typedef ::memory::pointer::dumb<manager_type>        manager_dumb_ptr_type;
+
             typedef std::function< size_t () >  listener_type;
 
+            typedef ::fileM::logic::device::pure::device_class  this_type;
 
-                    device_class()
-                     {
-                      //insert( "connect",     item_type( ::reflection::property::function::member( this, &fileM::logic::device::this_type::connect     ) ) );
-                      //insert( "disconnect",  item_type( ::reflection::property::function::member( this, &fileM::logic::device::this_type::disconnect  ) ) );
-                      //insert( "status",      item_type( ::reflection::property::function::member( this, &fileM::logic::device::this_type::status      ) ) );
-                      //insert( "ping",        item_type( ::reflection::property::function::member( this, &fileM::logic::device::this_type::ping        ) ) );
-                      //insert( "property",    item_type( ::reflection::property::function::member( this, &fileM::logic::device::this_type::property    ) ) );
-                      //insert( "size",        item_type( ::reflection::property::function::member( this, &fileM::logic::device::this_type::size        ) ) );
-                     }
+
+            explicit device_class( manager_dumb_ptr_type const& manager_param = manager_dumb_ptr_type{ nullptr } )
+                      : m_manager( manager_param )
+                      {
+                       insert( "connect",     item_type( ::reflection::property::function::member( this, &this_type::connect     ) ) );
+                       insert( "disconnect",  item_type( ::reflection::property::function::member( this, &this_type::disconnect  ) ) );
+                       //insert( "status",      item_type( ::reflection::property::function::member( this, &this_type::status      ) ) );
+                       //insert( "refresh",        item_type( ::reflection::property::function::member( this, &this_type::ping        ) ) );
+                      }
 
             virtual ~device_class(){}
 
@@ -67,6 +73,13 @@ namespace fileM
             void listener( listener_type const& listener_param ){ m_listener = listener_param; }
           private:
             listener_type m_listener;
+
+          public:
+            manager_dumb_ptr_type const& manager()const{ return m_manager; }
+            void                    manager( manager_dumb_ptr_type const& manager_param ){ m_manager = manager_param; }
+          private:
+            manager_dumb_ptr_type m_manager;
+
          };
 
         typedef ::fileM::logic::device::pure::device_class *  device_pointer_type;

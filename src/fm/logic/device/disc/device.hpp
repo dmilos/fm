@@ -3,6 +3,7 @@
 // ::fileM::logic::device::disc::device_class
 
 #include "../pure/device.hpp"
+#include "../pure/manager.hpp"
 
 
 namespace fileM
@@ -14,25 +15,29 @@ namespace fileM
       namespace disc
        {
 
-      class device_class
-       : public ::fileM::logic::device::pure::device_class
-       {
-        public:
-                  device_class();
+        class device_class
+         : public ::fileM::logic::device::pure::device_class
+         {
+          public:
+            typedef ::fileM::logic::device::pure::device_class pure_type;
+            typedef ::fileM::logic::device::pure::manager_class manager_type;
+            typedef ::fileM::logic::device::pure::manager_dumb_ptr_type manager_dumb_ptr_type;
 
-          virtual ~device_class();
+            explicit device_class( manager_dumb_ptr_type const& manager_param = manager_dumb_ptr_type{nullptr} );
 
-        public:
-          virtual bool         connect();
-          virtual void         disconnect();
-          virtual bool         status()const;
-          virtual bool         refresh()const;
+            virtual ~device_class();
 
-          virtual size_type    size();
-          virtual size_type    list( file_list_type & list, attribute_type const& filter_param, size_type const& begin, size_type const& end );
+          public:
+            virtual bool         connect();
+            virtual void         disconnect();
+            virtual bool         status()const;
+            virtual bool         refresh()const;
 
-       };
-       
+            virtual size_type    size();
+            virtual size_type    list( file_list_type & list, attribute_type const& filter_param, size_type const& begin, size_type const& end );
+
+         };
+
        }
      }
    }

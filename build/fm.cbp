@@ -7,6 +7,7 @@
 		<Option makefile_is_custom="1" />
 		<Option pch_mode="2" />
 		<Option compiler="gcc" />
+		<Option virtualFolders="logic/;main/;type/;view/;logic/device/;logic/device/disc/;logic/device/ftp/;logic/device/news/;logic/device/null/;logic/device/pure/;logic/device/mail/;logic/device/disc/ms/;logic/device/disc/linux/;" />
 		<Build>
 			<Target title="Debug">
 				<Option output="../out/bin/main" prefix_auto="1" extension_auto="1" />
@@ -23,6 +24,87 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="../src/fm/logic/device/disc/device.hpp">
+			<Option virtualFolder="logic/device/disc/" />
+		</Unit>
+		<Unit filename="../src/fm/logic/device/disc/disc.hpp">
+			<Option virtualFolder="logic/device/disc/" />
+		</Unit>
+		<Unit filename="../src/fm/logic/device/disc/file.hpp">
+			<Option virtualFolder="logic/device/disc/" />
+		</Unit>
+		<Unit filename="../src/fm/logic/device/disc/linux/device.cpp">
+			<Option virtualFolder="logic/device/disc/linux/" />
+		</Unit>
+		<Unit filename="../src/fm/logic/device/disc/linux/file.cpp">
+			<Option virtualFolder="logic/device/disc/linux/" />
+		</Unit>
+		<Unit filename="../src/fm/logic/device/disc/linux/manager.cpp">
+			<Option virtualFolder="logic/device/disc/linux/" />
+		</Unit>
+		<Unit filename="../src/fm/logic/device/disc/manager.hpp">
+			<Option virtualFolder="logic/device/disc/" />
+		</Unit>
+		<Unit filename="../src/fm/logic/device/disc/ms/device.cpp">
+			<Option virtualFolder="logic/device/disc/ms/" />
+		</Unit>
+		<Unit filename="../src/fm/logic/device/disc/ms/file.cpp">
+			<Option virtualFolder="logic/device/disc/ms/" />
+		</Unit>
+		<Unit filename="../src/fm/logic/device/disc/ms/manager.cpp">
+			<Option virtualFolder="logic/device/disc/ms/" />
+		</Unit>
+		<Unit filename="../src/fm/logic/device/disc/property.hpp">
+			<Option virtualFolder="logic/device/disc/" />
+		</Unit>
+		<Unit filename="../src/fm/logic/device/mail/manager.hpp">
+			<Option virtualFolder="logic/device/mail/" />
+		</Unit>
+		<Unit filename="../src/fm/logic/device/null/device.hpp">
+			<Option virtualFolder="logic/device/null/" />
+		</Unit>
+		<Unit filename="../src/fm/logic/device/null/manager.hpp">
+			<Option virtualFolder="logic/device/null/" />
+		</Unit>
+		<Unit filename="../src/fm/logic/device/null/null.hpp">
+			<Option virtualFolder="logic/device/null/" />
+		</Unit>
+		<Unit filename="../src/fm/logic/device/null/property.hpp">
+			<Option virtualFolder="logic/device/null/" />
+		</Unit>
+		<Unit filename="../src/fm/logic/device/pure/device.hpp">
+			<Option virtualFolder="logic/device/pure/" />
+		</Unit>
+		<Unit filename="../src/fm/logic/device/pure/file.hpp">
+			<Option virtualFolder="logic/device/pure/" />
+		</Unit>
+		<Unit filename="../src/fm/logic/device/pure/manager.hpp">
+			<Option virtualFolder="logic/device/pure/" />
+		</Unit>
+		<Unit filename="../src/fm/logic/device/pure/property.hpp">
+			<Option virtualFolder="logic/device/pure/" />
+		</Unit>
+		<Unit filename="../src/fm/logic/device/pure/pure.hpp">
+			<Option virtualFolder="logic/device/pure/" />
+		</Unit>
+		<Unit filename="../src/fm/logic/logic.hpp">
+			<Option virtualFolder="logic/" />
+		</Unit>
+		<Unit filename="../src/fm/main/main.cpp">
+			<Option virtualFolder="main/" />
+		</Unit>
+		<Unit filename="../src/fm/type/data.hpp">
+			<Option virtualFolder="type/" />
+		</Unit>
+		<Unit filename="../src/fm/type/dumb_ptr.hpp">
+			<Option virtualFolder="type/" />
+		</Unit>
+		<Unit filename="../src/fm/type/size.hpp">
+			<Option virtualFolder="type/" />
+		</Unit>
+		<Unit filename="../src/fm/type/string.hpp">
+			<Option virtualFolder="type/" />
+		</Unit>
 		<Extensions>
 			<code_completion />
 			<debugger />

@@ -18,9 +18,10 @@ bool      manager_class::refresh()const
   return false;
  }
 
-void      manager_class::size()const
+manager_class::size_type      manager_class::size()const
  {
   //TODO
+  return 0;
  }
 
 manager_class::size_type

@@ -2,7 +2,7 @@
 
 using namespace ::fileM::logic::device::disc
 
-device_class::device_class()
+device_class::device_class( ::fileM::logic::device::pure::manager_class * )
  {
   // TODO
  }

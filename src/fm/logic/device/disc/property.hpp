@@ -2,7 +2,7 @@
 #define fm_logic_device_disc_property
 
 
-#include "../../property.hpp"
+#include "../pure/property.hpp"
 
 
 namespace fileM
@@ -15,18 +15,11 @@ namespace fileM
        {
 
         class property_class
-         : public ::fileM::logic::property_class
+         : public ::fileM::logic::device::pure::property_class
           {
            public:
 
-            property_class( object_type * parent_param )
-             : ::fileM::logic::property_class( parent_param )
-             {
-              //insert( "set",     item_type( ::reflection::property::function::member( this, &fileM::logic::property::set     ) ) );
-              //insert( "get",     item_type( ::reflection::property::function::member( this, &fileM::logic::property::get     ) ) );
-              //insert( "size",    item_type( ::reflection::property::function::member( this, &fileM::logic::property::size    ) ) );
-              //insert( "refresh", item_type( ::reflection::property::function::member( this, &fileM::logic::property::refresh ) ) );
-             }
+             property_class( object_type * parent_param );
 
             ~property_class();
 

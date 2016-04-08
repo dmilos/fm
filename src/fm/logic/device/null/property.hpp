@@ -2,7 +2,7 @@
 #define fm_logic_device_null_property
 
 
-#include "../../property.hpp"
+#include "../pure/property.hpp"
 
 
 namespace fileM

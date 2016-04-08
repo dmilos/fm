@@ -12,9 +12,9 @@ directory_bin = os.path.join( '..','out','bin'  )
 
 directory_submodule = os.path.join( '..','submodule'  )
 
-settings.set_custom( 'RTL', 'dynamic' )
-settings.set_custom( 'architecture', 'i386' )
-settings.set_custom( 'configuration', 'debug' )
+settings.set_custom( 'RTL',           'dynamic' )
+settings.set_custom( 'architecture',  'i386'    )
+settings.set_custom( 'configuration', 'debug'   )
 
 configuration = settings.get_custom( 'configuration' )
 
@@ -38,9 +38,22 @@ settings.accumulate( 'RTL', { 'configuration' : configuration, 'type': settings.
 # Accumulate source
 envObject = nucleotide.Environment( settings ).native()
 
+def process_source( source_path ):
+    path = str.split( source_path, '/' )
+    name, ext = str.split( path[ len(path) - 1  ], '.' )
+    path[ len(path) - 1  ] = name
+    args =  {
+       'target' : os.path.join( directory_obj, *path ) + envObject[ 'OBJSUFFIX' ]
+      ,'source' : os.path.join( directory_src, *path ) + '.' + ext
+    }
+    return args
+
 source = []
-source +=   [
-   envObject.StaticObject( target =  os.path.join( directory_obj, 'main'       ) + envObject[ 'OBJSUFFIX' ],  source = os.path.join( directory_src, 'main/main.cpp' ) )
+source += [
+    envObject.StaticObject( **process_source( 'main/main.cpp' ) )
+   ,envObject.StaticObject( **process_source( 'logic/device/disc/linux/device.cpp' ) )
+   ,envObject.StaticObject( **process_source( 'logic/device/disc/linux/manager.cpp' ) )
+   ,envObject.StaticObject( **process_source( 'logic/device/disc/linux/file.cpp' ) )
   ]
 
 # Make native environment

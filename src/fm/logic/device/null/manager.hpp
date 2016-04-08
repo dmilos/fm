@@ -29,7 +29,7 @@ namespace fileM
 
             virtual bool         refresh()const{ return false; }
 
-            virtual void      size()const{ return; }
+            virtual size_type      size()const{ return 0; }
             virtual size_type list( device_list_type & list, size_type const& begin, size_type const& end )const{ return 0;}
           };
 

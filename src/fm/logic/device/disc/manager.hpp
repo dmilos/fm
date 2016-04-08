@@ -19,14 +19,12 @@ namespace fileM
          {
           public:
 
-                      manager_class()
-                       {
-                       }
+                      manager_class();
 
-             virtual ~manager_class(){}
+             virtual ~manager_class();
 
              virtual bool      refresh()const;
-             virtual void      size()const;
+             virtual size_type size()const;
              virtual size_type list( device_list_type & list, size_type const& begin, size_type const& end )const;
           };
 
