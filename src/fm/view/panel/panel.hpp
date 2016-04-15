@@ -16,7 +16,7 @@ namespace fileM
 
       //  cursor()
       //  selection()
-      // device
+      // storage
     }; 	
 
    }

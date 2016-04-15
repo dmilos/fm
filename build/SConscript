@@ -51,9 +51,9 @@ def process_source( source_path ):
 source = []
 source += [
     envObject.StaticObject( **process_source( 'main/main.cpp' ) )
-   ,envObject.StaticObject( **process_source( 'logic/device/disc/linux/device.cpp' ) )
-   ,envObject.StaticObject( **process_source( 'logic/device/disc/linux/manager.cpp' ) )
-   ,envObject.StaticObject( **process_source( 'logic/device/disc/linux/file.cpp' ) )
+   ,envObject.StaticObject( **process_source( 'logic/storage/disc/linux/device.cpp' ) )
+   ,envObject.StaticObject( **process_source( 'logic/storage/disc/linux/manager.cpp' ) )
+   ,envObject.StaticObject( **process_source( 'logic/storage/disc/linux/file.cpp' ) )
   ]
 
 # Make native environment
