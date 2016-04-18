@@ -54,6 +54,13 @@ source += [
    ,envObject.StaticObject( **process_source( 'logic/storage/disc/linux/device.cpp' ) )
    ,envObject.StaticObject( **process_source( 'logic/storage/disc/linux/manager.cpp' ) )
    ,envObject.StaticObject( **process_source( 'logic/storage/disc/linux/file.cpp' ) )
+
+   ,envObject.StaticObject( **process_source( 'logic/storage/disc/linux/device/property/folder.cpp' ) )
+   ,envObject.StaticObject( **process_source( 'logic/storage/disc/linux/device/property/name.cpp' ) )
+   ,envObject.StaticObject( **process_source( 'logic/storage/disc/linux/device/property/size.cpp' ) )
+
+   ,envObject.StaticObject( **process_source( 'logic/storage/disc/linux/file/property/name.cpp' ) )
+   ,envObject.StaticObject( **process_source( 'logic/storage/disc/linux/file/property/size.cpp' ) )
   ]
 
 # Make native environment

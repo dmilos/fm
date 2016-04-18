@@ -8,17 +8,17 @@ using namespace ::fileM::logic::storage::disc;
 device_class::device_class( manager_dumb_ptr_type const& manager_param )
  : pure_type( manager_param )
  {
+  using namespace ::fileM::logic::storage::disc::linux::device::property;
 
-    //insert( "name",   ::fileM::logic::storage::disc::linux::device::property::name_class{    this, "/dev/null" } );
-    //insert( "folder", ::fileM::logic::storage::disc::linux::device::property::folder_class{  this,  "/" } );
-    //insert( "size",   ::fileM::logic::storage::disc::linux::device::property::size_class{    this    } );
-
-    //insert( "mode",   disc::proprty::storage::mode{    this } );
-    //insert( "gid",    disc::proprty::storage::gid{     this } );
-    //insert( "size",   disc::proprty::storage::size{    this } );
-    //insert( "noexec", disc::proprty::storage::noexec{  this } );
-    //insert( "nosuid", disc::proprty::storage::nosuid{  this } );
-    //insert( "nodev",  disc::proprty::storage::nodev{   this } );
+    //insert( "name",   name_class{    this, "/dev/null" } );
+    //insert( "folder", folder_class{  this,  "/" } );
+    //insert( "size",   size_class{    this    } );
+    //insert( "mode",   mode{    this } );
+    //insert( "gid",    gid{     this } );
+    //insert( "size",   size{    this } );
+    //insert( "noexec", noexec{  this } );
+    //insert( "nosuid", nosuid{  this } );
+    //insert( "nodev",  nodev{   this } );
  }
 
 device_class::~device_class()

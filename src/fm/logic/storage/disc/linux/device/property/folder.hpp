@@ -24,6 +24,7 @@ namespace fileM
                : public ::fileM::logic::storage::pure::property_class
                 {
                  public:
+                   typedef ::fileM::logic::storage::pure::property_class property_type;
 
                    folder_class( object_type * parent_param );
 

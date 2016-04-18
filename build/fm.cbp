@@ -7,7 +7,7 @@
 		<Option makefile_is_custom="1" />
 		<Option pch_mode="2" />
 		<Option compiler="gcc" />
-		<Option virtualFolders="logic/;main/;type/;view/;logic/storage/;logic/storage/disc/;logic/storage/ftp/;logic/storage/news/;logic/storage/null/;logic/storage/pure/;logic/storage/mail/;logic/storage/disc/ms/;logic/storage/disc/linux/;" />
+		<Option virtualFolders="logic/;main/;type/;view/;logic/storage/;logic/storage/disc/;logic/storage/ftp/;logic/storage/news/;logic/storage/null/;logic/storage/pure/;logic/storage/mail/;logic/storage/disc/ms/;logic/storage/disc/linux/;logic/storage/disc/linux/device/;logic/storage/disc/linux/device/property/;" />
 		<Build>
 			<Target title="Debug">
 				<Option output="../out/bin/main" prefix_auto="1" extension_auto="1" />
@@ -35,6 +35,27 @@
 		</Unit>
 		<Unit filename="../src/fm/logic/storage/disc/linux/device.cpp">
 			<Option virtualFolder="logic/storage/disc/linux/" />
+		</Unit>
+		<Unit filename="../src/fm/logic/storage/disc/linux/device/property/folder.cpp">
+			<Option virtualFolder="logic/storage/disc/linux/device/property/" />
+		</Unit>
+		<Unit filename="../src/fm/logic/storage/disc/linux/device/property/folder.hpp">
+			<Option virtualFolder="logic/storage/disc/linux/device/property/" />
+		</Unit>
+		<Unit filename="../src/fm/logic/storage/disc/linux/device/property/name.cpp">
+			<Option virtualFolder="logic/storage/disc/linux/device/property/" />
+		</Unit>
+		<Unit filename="../src/fm/logic/storage/disc/linux/device/property/name.hpp">
+			<Option virtualFolder="logic/storage/disc/linux/device/property/" />
+		</Unit>
+		<Unit filename="../src/fm/logic/storage/disc/linux/device/property/property.hpp">
+			<Option virtualFolder="logic/storage/disc/linux/device/property/" />
+		</Unit>
+		<Unit filename="../src/fm/logic/storage/disc/linux/device/property/size.cpp">
+			<Option virtualFolder="logic/storage/disc/linux/device/property/" />
+		</Unit>
+		<Unit filename="../src/fm/logic/storage/disc/linux/device/property/size.hpp">
+			<Option virtualFolder="logic/storage/disc/linux/device/property/" />
 		</Unit>
 		<Unit filename="../src/fm/logic/storage/disc/linux/file.cpp">
 			<Option virtualFolder="logic/storage/disc/linux/" />
