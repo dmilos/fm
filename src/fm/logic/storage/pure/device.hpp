@@ -49,8 +49,8 @@ namespace fileM
             explicit device_class( manager_dumb_ptr_type const& manager_param = manager_dumb_ptr_type{ nullptr } )
                       : m_manager( manager_param )
                       {
-                       insert( "connect",     item_type( ::reflection::property::function::member( this, &this_type::connect     ) ) );
-                       insert( "disconnect",  item_type( ::reflection::property::function::member( this, &this_type::disconnect  ) ) );
+                       //insert( "connect",     item_type( ::reflection::property::function::member( this, &this_type::connect     ) ) );
+                       //insert( "disconnect",  item_type( ::reflection::property::function::member( this, &this_type::disconnect  ) ) );
                        //insert( "status",      item_type( ::reflection::property::function::member( this, &this_type::status      ) ) );
                        //insert( "refresh",        item_type( ::reflection::property::function::member( this, &this_type::ping        ) ) );
                       }
@@ -82,9 +82,9 @@ namespace fileM
 
          };
 
-        typedef ::fileM::logic::storage::pure::device_class *  device_pointer_type;
+        typedef std::shared_ptr<::fileM::logic::storage::pure::device_class>  device_pointer_type;
       //typedef ::fileM::logic::storage::pure::device_class *  pointer_raw_type;
-        typedef std::vector< device_pointer_type >            device_list_type;
+        typedef std::vector< device_pointer_type >             device_list_type;
 
        }
      }

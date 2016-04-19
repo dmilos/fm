@@ -3,8 +3,9 @@
 using namespace fileM::logic::storage::disc::linux::device::property;
 
 name_class::name_class( object_type * parent_param )
- : property_type( parent_param, string_type( "string::file::name" ) )
+ : property_type( parent_param )
  {
+   //TODO this->member_type::type() = "string::file::name";
  }
 
 name_class::~name_class()

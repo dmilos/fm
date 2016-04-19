@@ -2,6 +2,8 @@
 
 #include "./device/property/property.hpp"
 
+#include "type/ptr/make.hpp"
+
 
 using namespace ::fileM::logic::storage::disc;
 
@@ -11,7 +13,10 @@ device_class::device_class( manager_dumb_ptr_type const& manager_param )
   using namespace ::fileM::logic::storage::disc::linux::device::property;
 
     //insert( "name",   name_class{    this, "/dev/null" } );
-    //insert( "folder", folder_class{  this,  "/" } );
+
+    insert(  "current::folder", item_type( ::memory::pointer::make( folder_class{  this,  "/home" } ) ) );
+
+    //insert( "folder",  );
     //insert( "size",   size_class{    this    } );
     //insert( "mode",   mode{    this } );
     //insert( "gid",    gid{     this } );

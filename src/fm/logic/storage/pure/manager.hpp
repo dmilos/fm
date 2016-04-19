@@ -40,7 +40,7 @@ namespace fileM
 
             virtual ~manager_class(){}
 
-            virtual bool         refresh()const=0;
+            virtual bool         refresh()=0;
 
             virtual size_type      size()const=0;
             virtual size_type list( device_list_type & list, size_type const& begin, size_type const& end )const=0;

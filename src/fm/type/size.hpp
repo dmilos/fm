@@ -1,6 +1,6 @@
 #ifndef fileM_type_size
 #define fileM_type_size
-// ::fileM:type::size
+// ::fileM::type::size_type
 
 namespace fileM
  {

@@ -21,6 +21,7 @@ configuration = settings.get_custom( 'configuration' )
 # Accumulate Atoms
 settings.accumulate( 'include', { '1' : os.path.join( directory_submodule,      'color', 'src' ) } )
 settings.accumulate( 'include', { '2' : os.path.join( directory_submodule, 'reflection', 'src' ) } )
+settings.accumulate( 'include', { '3' : os.path.join( directory_submodule, 'reflection', 'src', 'reflection' ) } )
 
 settings.accumulate( 'architecture', { 'name' : settings.get_custom( 'architecture' ) } )
 settings.accumulate( 'exception' )

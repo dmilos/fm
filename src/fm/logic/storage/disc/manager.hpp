@@ -23,9 +23,12 @@ namespace fileM
 
              virtual ~manager_class();
 
-             virtual bool      refresh()const;
+             virtual bool      refresh();
              virtual size_type size()const;
              virtual size_type list( device_list_type & list, size_type const& begin, size_type const& end )const;
+          private:
+            mutable device_list_type m_list;
+
           };
 
        }

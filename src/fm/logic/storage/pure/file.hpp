@@ -63,7 +63,8 @@ namespace fileM
             listener_type m_listener;
          };
 
-        typedef fileM::logic::storage::pure::file_class                      *    file_pointer_type;
+        typedef std::shared_ptr<fileM::logic::storage::pure::file_class>           file_pointer_type;
+        //typedef fileM::logic::storage::pure::file_class                      *    file_pointer_type;
         typedef std::vector< ::fileM::logic::storage::pure::file_class >             file_list_type;
 
        }
