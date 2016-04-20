@@ -47,9 +47,11 @@ namespace fileM
             typedef ::fileM::logic::storage::pure::file_class this_type;
 
 
-            explicit file_class( device_type *device_param = nullptr );
+            explicit file_class( device_type *device_param = nullptr ):m_device(device_param){}
 
-            virtual ~file_class();
+            virtual ~file_class(){}
+          public:
+            virtual void refresh()=0;
 
           public:
             device_ptr_type storage( void ){ return m_device; }
@@ -63,9 +65,9 @@ namespace fileM
             listener_type m_listener;
          };
 
-        typedef std::shared_ptr<fileM::logic::storage::pure::file_class>           file_pointer_type;
+        typedef std::shared_ptr<fileM::logic::storage::pure::file_class>            file_pointer_type;
         //typedef fileM::logic::storage::pure::file_class                      *    file_pointer_type;
-        typedef std::vector< ::fileM::logic::storage::pure::file_class >             file_list_type;
+        typedef std::vector< ::fileM::logic::storage::pure::file_pointer_type >        file_list_type;
 
        }
      }

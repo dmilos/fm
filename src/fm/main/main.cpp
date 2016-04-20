@@ -17,7 +17,5 @@ int main( int argc, char *argv[] )
   ::fileM::logic::storage::pure::file_list_type fl;
   d.list( fl, ::fileM::logic::storage::pure::attribute_type{}, 0, 10 );
 
-  ::fileM::logic::storage::pure::file_class f{};
-
   return EXIT_SUCCESS;
  }

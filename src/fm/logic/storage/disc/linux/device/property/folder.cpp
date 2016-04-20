@@ -14,27 +14,6 @@ folder_class::~folder_class()
   // TODO
  }
 
-folder_class::size_type
-folder_class::size( )const
- {
-  // TODO
-  return 0;
- }
-
-bool
-folder_class::set( data_type const& name )
- {
-  // TODO
-  return false;
- }
-
-folder_class::size_type
-folder_class::get( data_type & value )
- {
-  // TODO
-  return 0;
- }
-
 void
 folder_class::refresh()
  {

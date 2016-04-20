@@ -1,23 +1,22 @@
-#include "../disc.hpp"
+#include "../device.hpp"
 
 #include "./device/property/property.hpp"
 
 #include "type/ptr/make.hpp"
 
+#include "../file.hpp"
 
 using namespace ::fileM::logic::storage::disc;
 
-device_class::device_class( manager_dumb_ptr_type const& manager_param )
+device_class::device_class( manager_dumb_ptr_type const& manager_param, string_type const& name_param )
  : pure_type( manager_param )
  {
   using namespace ::fileM::logic::storage::disc::linux::device::property;
 
-    //insert( "name",   name_class{    this, "/dev/null" } );
+  insert(  "name",   item_type( ::memory::pointer::make(   name_class{  this,  name_param } ) ) );
+  insert(  "folder", item_type( ::memory::pointer::make( folder_class{  this,  "/home" } ) ) );
+  insert(  "size",   item_type( ::memory::pointer::make(   size_class{  this } ) ) );
 
-    insert(  "current::folder", item_type( ::memory::pointer::make( folder_class{  this,  "/home" } ) ) );
-
-    //insert( "folder",  );
-    //insert( "size",   size_class{    this    } );
     //insert( "mode",   mode{    this } );
     //insert( "gid",    gid{     this } );
     //insert( "size",   size{    this } );
@@ -65,14 +64,26 @@ device_class::size()
 
 
 device_class::size_type
-device_class::list( file_list_type & list, attribute_type const& filter_param, size_type const& begin, size_type const& end )
+device_class::list
+ (
+   file_list_type & list
+  ,attribute_type const& filter_param
+  ,size_type const& begin
+  ,size_type const& end
+ )
  {
+  //TODO string_type const& folder = ::reflection::property::inspect::present( filter_param.get("folder") );
+
   for( int i=0; i< 10; i++ )
    {
-    list.push_back( ::fileM::logic::storage::pure::file_class{ this } );
-    //list.back().set( "path", "/home/asd/asd.txt" );
+    using namespace ::fileM::logic::storage::pure;
+
+    list.push_back( file_pointer_type{ new ::fileM::logic::storage::disc::file_class{ this } } );
+
+    ::reflection::property::mutate::process< string_type const&, bool>( list.back()->get("name"), "TODO.TODO" );
+
    }
 
-  return 0;
+  return list.size();
  }
 

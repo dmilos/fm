@@ -1,10 +1,13 @@
 #include "./name.hpp"
 
+#include "../../../../pure/file.hpp"
+
 using namespace fileM::logic::storage::disc::linux::file::property;
 
-name_class::name_class( object_type * parent_param )
+name_class::name_class( object_type * parent_param, string_type const& name_param  )
  : property_type( parent_param )
  {
+  this->category_type::type() = "string::file::name";
  }
 
 name_class::~name_class()
@@ -12,30 +15,25 @@ name_class::~name_class()
   // TODO
  }
 
-name_class::size_type          
-name_class::size( )const
+bool   name_class::process( string_type const& name_param )
  {
-  // TODO  
-  return 0;
+  m_name = name_param;
+
+  typedef ::fileM::logic::storage::pure::file_class file_type;
+
+  auto parent_file = dynamic_cast<file_type*>( m_parent );
+  if( nullptr == parent_file )
+   {
+    return false;
+   }
+  parent_file->refresh();
+  return true;
  }
 
-bool               
-name_class::set( string_type const& name )const
- {
-  // TODO  
-  return false;
- }
 
-name_class::size_type          
-name_class::get( string_type const& name, string_type & value )
- {
-  // TODO  
-  return 0;
- }
-
-void                           
+void
 name_class::refresh()
  {
-  // TODO
+  // do nothing
   return;
  }

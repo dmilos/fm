@@ -3,20 +3,32 @@
 
 #include "./file/property/property.hpp"
 
+#include "type/ptr/make.hpp"
 
-using namespace fileM::logic::storage::pure;
 
-file_class::file_class( device_type *device_param )
- : m_device( device_param )
+using namespace fileM::logic::storage::disc;
+
+file_class::file_class( device_type *device_param, string_type const& name_param  )
+ : pure_type( device_param )
  {
-  //insert( "name",   ::fileM::logic::storage::disc::linux::device::property::name_class{ this, "/dev/null" } );
-  //insert( "size",   ::fileM::logic::storage::disc::linux::device::property::size_class{ this    } );
+  using namespace ::fileM::logic::storage::disc::linux::file::property;
+
+  insert(  "name",   item_type( ::memory::pointer::make(   name_class{  this, name_param } ) ) );
+  insert(  "size",   item_type( ::memory::pointer::make(   size_class{  this } ) ) );
+
  }
 
 file_class::~file_class()
  {
-
  }
+
+
+void file_class::refresh()
+ {
+ // dynamic_cast< property_type & >( get("name" ) )->refresh();
+  //dynamic_cast< property_type & >( get("size" ) )->refresh();
+ }
+
 
 /*
 file_class::device_ptr_type file_class::storage( void )

@@ -30,6 +30,7 @@ namespace fileM
 
            typedef ::fileM::logic::storage::pure::property_class this_type;
 
+         public:
            explicit property_class( object_type * parent_param = nullptr )
             :m_parent( parent_param )
             {
@@ -37,17 +38,7 @@ namespace fileM
 
            virtual ~property_class(){}
 
-           virtual size_type          size( )const=0;
-
-           // must obey value.capacity()
-           virtual size_type          get( data_type & value )const=0;
-
-           virtual bool               set( data_type const& data )=0;
-
-           virtual bool               insert(  data_type const& value,  size_type const& position )=0;
-           virtual bool               replace( data_type const& value,  size_type const& position )=0;
-           virtual bool               erase(   size_type const& begin, size_type const& end )=0;
-
+         public:
            virtual void               refresh()=0;
 
           public:

@@ -23,7 +23,7 @@ namespace fileM
             typedef ::fileM::logic::storage::pure::manager_class manager_type;
             typedef ::fileM::logic::storage::pure::manager_dumb_ptr_type manager_dumb_ptr_type;
 
-            explicit device_class( manager_dumb_ptr_type const& manager_param = manager_dumb_ptr_type{nullptr} );
+            explicit device_class( manager_dumb_ptr_type const& manager_param = manager_dumb_ptr_type{nullptr}, string_type const& name_param = "/dev/null" );
 
             virtual ~device_class();
 

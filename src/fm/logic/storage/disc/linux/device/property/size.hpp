@@ -36,16 +36,12 @@ namespace fileM
 
                    size_class( object_type * parent_param );
 
-                   ~size_class();
+                  ~size_class();
 
                  public:
                     bool             process( size_type const& size_param ){ m_size = size_param; }
                     size_type const& present()const{ return m_size; }
                  public:
-                   virtual size_type          size( )const;
-                   // must obey value.capacity()
-                   virtual size_type          get( string_type const& name, string_type & value );
-                   virtual bool               set( string_type const& name )const;
                    virtual void               refresh();
                  private:
                    size_type m_size;

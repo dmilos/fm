@@ -31,17 +31,13 @@ namespace fileM
 
                    typedef ::type::category::pure_class<string_type>  category_type;
 
-                   name_class( object_type * parent_param );
+                   name_class( object_type * parent_param, string_type const& name_param );
 
                   ~name_class();
-                  public:
+                 public:
                      bool               process( string_type const& name_param ){ m_name = name_param; }
                      string_type const& present()const{ return m_name; }
-
-                  virtual size_type          size( )const;
-                  virtual bool               set( string_type const& name )const;
-                  // must obey value.capacity()
-                  virtual size_type          get( string_type const& name, string_type & value );
+                 private:
                   virtual void               refresh();
                  private:
                    string_type m_name;
