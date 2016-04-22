@@ -39,7 +39,7 @@ namespace fileM
                   ~folder_class();
 
                  public:
-                   bool               process( string_type const& path_param ){ m_path= path_param; }
+                   bool               process( string_type const& path_param );
                    string_type const& present()const{ return m_path; }
                  private:
                    std::string m_path;

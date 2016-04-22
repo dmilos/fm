@@ -69,19 +69,24 @@ device_class::list
    file_list_type & list
   ,attribute_type const& filter_param
   ,size_type const& begin
-  ,size_type const& end
+  ,size_type const& size
  )
  {
-  //TODO string_type const& folder = ::reflection::property::inspect::present( filter_param.get("folder") );
+  auto folder_iter = filter_param.find( "folder" );
+  if( folder_iter == filter_param.end() )
+   {
+    return 0;
+   }
 
-  for( int i=0; i< 10; i++ )
+  string_type const& folder = ::reflection::property::inspect::present< string_type const& >( dynamic_cast< ::reflection::property::pure_class const&> ( *(folder_iter->second) ) );
+
+  for( int i=begin; i < begin + size; i++ )
    {
     using namespace ::fileM::logic::storage::pure;
 
-    list.push_back( file_pointer_type{ new ::fileM::logic::storage::disc::file_class{ this } } );
+    list.push_back( file_pointer_type{ new ::fileM::logic::storage::disc::file_class{ this, "TODO.TODO" } } );
 
-    ::reflection::property::mutate::process< string_type const&, bool>( list.back()->get("name"), "TODO.TODO" );
-
+    //::reflection::property::mutate::process< string_type const&, bool>( list.back()->get("name"), "TODO.TODO" );
    }
 
   return list.size();

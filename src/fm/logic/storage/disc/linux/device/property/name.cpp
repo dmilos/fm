@@ -13,9 +13,18 @@ name_class::~name_class()
   // TODO
  }
 
+bool
+name_class::process( string_type const& name_param )
+ {
+  m_name = name_param;
+  return true;
+ }
+
 void
 name_class::refresh()
  {
   // TODO
   return;
  }
+
+

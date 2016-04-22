@@ -47,8 +47,9 @@ namespace fileM
             object_ptr_type m_parent;
          };
 
-        typedef ::fileM::logic::storage::pure::property_class pointer_type;
-        typedef std::map< ::fileM::type::string_type, ::fileM::logic::storage::pure::property_class * > attribute_type;
+        typedef ::fileM::logic::storage::pure::property_class property_pointer_type;
+
+        typedef std::map< ::fileM::type::string_type, property_pointer_type * > attribute_type;
 
        }
      }

@@ -13,6 +13,7 @@ size_class::~size_class()
   // TODO
  }
 
+
 void
 size_class::refresh()
  {

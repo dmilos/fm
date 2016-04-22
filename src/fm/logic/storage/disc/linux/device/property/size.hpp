@@ -24,7 +24,7 @@ namespace fileM
 
               class size_class
                : public ::fileM::logic::storage::pure::property_class
-               , public ::reflection::content::guarded::pure_class< ::fileM::type::size_type, ::fileM::type::size_type const&,::fileM::type::size_type const&, bool>
+               , public ::reflection::content::inspect::pure_class< ::fileM::type::size_type, ::fileM::type::size_type const& >
                 {
                  public:
                    typedef ::fileM::logic::storage::pure::property_class property_type;
@@ -39,7 +39,6 @@ namespace fileM
                   ~size_class();
 
                  public:
-                    bool             process( size_type const& size_param ){ m_size = size_param; }
                     size_type const& present()const{ return m_size; }
                  public:
                    virtual void               refresh();

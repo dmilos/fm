@@ -3,6 +3,8 @@
 
 #include "../logic/logic.hpp"
 
+#include "type/ptr/make.hpp"
+
 int main( int argc, char *argv[] )
  {
   std::cout << "Hello World" << std::endl;
@@ -14,8 +16,13 @@ int main( int argc, char *argv[] )
   ::fileM::logic::storage::pure::device_list_type dl;
   m.list( dl, 0, 10 );
 
-  ::fileM::logic::storage::pure::file_list_type fl;
-  d.list( fl, ::fileM::logic::storage::pure::attribute_type{}, 0, 10 );
+  ::fileM::logic::storage::pure::file_list_type list;
+
+  ::fileM::logic::storage::pure::attribute_type filter;
+  filter.emplace(  "folder", ::memory::pointer::make( ::fileM::logic::storage::pure::property::string_class{  "/home"} ) );
+  filter.emplace(  "name",   ::memory::pointer::make( ::fileM::logic::storage::pure::property::string_class{  "*.*"  } ) );
+
+  d.list( list, filter, 0, 10 );
 
   return EXIT_SUCCESS;
  }

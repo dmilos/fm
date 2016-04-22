@@ -34,7 +34,7 @@ namespace fileM
             virtual bool         refresh()const;
 
             virtual size_type    size();
-            virtual size_type    list( file_list_type & list, attribute_type const& filter_param, size_type const& begin, size_type const& end );
+            virtual size_type    list( file_list_type & list, attribute_type const& filter_param, size_type const& begin, size_type const& size );
 
          };
 

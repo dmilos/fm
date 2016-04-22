@@ -14,6 +14,13 @@ folder_class::~folder_class()
   // TODO
  }
 
+bool
+folder_class::process( string_type const& path_param )
+ {
+  m_path = path_param;
+  return true;
+ }
+
 void
 folder_class::refresh()
  {

@@ -15,7 +15,6 @@ file_class::file_class( device_type *device_param, string_type const& name_param
 
   insert(  "name",   item_type( ::memory::pointer::make(   name_class{  this, name_param } ) ) );
   insert(  "size",   item_type( ::memory::pointer::make(   size_class{  this } ) ) );
-
  }
 
 file_class::~file_class()
@@ -25,8 +24,8 @@ file_class::~file_class()
 
 void file_class::refresh()
  {
- // dynamic_cast< property_type & >( get("name" ) )->refresh();
-  //dynamic_cast< property_type & >( get("size" ) )->refresh();
+  dynamic_cast< property_type & >( get("name" ) ).refresh();
+  dynamic_cast< property_type & >( get("size" ) ).refresh();
  }
 
 

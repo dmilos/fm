@@ -35,7 +35,7 @@ namespace fileM
 
                   ~name_class();
                  public:
-                     bool               process( string_type const& name_param ){ m_name = name_param; }
+                     bool               process( string_type const& name_param );
                      string_type const& present()const{ return m_name; }
                  private:
                   virtual void               refresh();
