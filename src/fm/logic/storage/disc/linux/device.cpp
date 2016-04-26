@@ -1,3 +1,7 @@
+
+#include <dirent.h>
+
+
 #include "../device.hpp"
 
 #include "./device/property/property.hpp"
@@ -72,23 +76,38 @@ device_class::list
   ,size_type const& size
  )
  {
-  auto folder_iter = filter_param.find( "folder" );
-  if( folder_iter == filter_param.end() )
+  auto folder_iter = filter_param.find( "folder" ); if( folder_iter == filter_param.end() ) { return 0; }
+  string_type const& folder = ::reflection::property::inspect::present< string_type const& >( dynamic_cast< ::reflection::property::pure_class const&> ( *(folder_iter->second) ) );
+
+  auto name_iter = filter_param.find( "name" ); if( name_iter == filter_param.end() ) { return 0; }
+  string_type const& name   = ::reflection::property::inspect::present< string_type const& >( dynamic_cast< ::reflection::property::pure_class const&> ( *(name_iter->second) ) );
+
+  std::uint32_t index = 0;
+
+  DIR *directory = opendir( folder.c_str() );
+  if( directory == NULL)
    {
     return 0;
    }
 
-  string_type const& folder = ::reflection::property::inspect::present< string_type const& >( dynamic_cast< ::reflection::property::pure_class const&> ( *(folder_iter->second) ) );
-
-  for( int i=begin; i < begin + size; i++ )
+  struct dirent *entry;
+  while( NULL !=( entry = readdir( directory ) ) )
    {
-    using namespace ::fileM::logic::storage::pure;
+    // if( false == match( name ) )
+    // {
+    //  continue;
+    // }
 
-    list.push_back( file_pointer_type{ new ::fileM::logic::storage::disc::file_class{ this, "TODO.TODO" } } );
+    ++index;
 
-    //::reflection::property::mutate::process< string_type const&, bool>( list.back()->get("name"), "TODO.TODO" );
+    list.push_back( file_pointer_type{ new ::fileM::logic::storage::disc::file_class{ this, entry->d_name } } );
+
+    if( size <= index )
+     {
+      break;
+     }
+
    }
 
   return list.size();
  }
-

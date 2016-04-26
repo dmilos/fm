@@ -6,10 +6,11 @@
 
 using namespace fileM::logic::storage::disc::linux::file::property;
 
-size_class::size_class( object_type * parent_param )
+size_class::size_class( object_type * parent_param, size_type const& size_param )
  : property_type( parent_param )
  {
   this->category_type::type() = "size::file::size";
+  m_size = size_param;
  }
 
 size_class::~size_class()

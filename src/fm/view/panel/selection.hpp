@@ -1,4 +1,6 @@
 
+// fileM::view:panel::selection
+
 namespace fileM
  {
   namespace view

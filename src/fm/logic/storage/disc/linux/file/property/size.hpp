@@ -34,7 +34,7 @@ namespace fileM
 
                    typedef ::type::category::pure_class<string_type>  category_type;
 
-                   size_class( object_type * parent_param );
+                   size_class( object_type * parent_param, size_type const& size_param = 0 );
 
                   ~size_class();
 

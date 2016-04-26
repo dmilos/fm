@@ -1,19 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <CodeBlocks_layout_file>
 	<ActiveTarget name="Debug" />
-	<File name="../src/fm/logic/storage/disc/linux/device/property/name.hpp" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="../src/fm/logic/storage/disc/linux/device/property/folder.hpp" open="0" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="924" topLine="18" />
-		</Cursor>
-	</File>
-	<File name="../src/fm/logic/storage/disc/linux/file/property/size.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="369" topLine="1" />
-		</Cursor>
-	</File>
-	<File name="../src/fm/logic/storage/disc/linux/file/property/size.hpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="520" topLine="12" />
+			<Cursor1 position="950" topLine="7" />
 		</Cursor>
 	</File>
 	<File name="../src/fm/logic/storage/null/null.hpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -21,14 +11,9 @@
 			<Cursor1 position="12" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="../src/fm/logic/storage/disc/file.hpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="../src/fm/logic/storage/disc/linux/device/property/size.hpp" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="768" topLine="10" />
-		</Cursor>
-	</File>
-	<File name="../src/fm/logic/storage/pure/pure.hpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="18" topLine="0" />
+			<Cursor1 position="653" topLine="15" />
 		</Cursor>
 	</File>
 	<File name="../src/fm/type/dumb_ptr.hpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -36,44 +21,14 @@
 			<Cursor1 position="106" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="../src/fm/logic/storage/disc/property.hpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="../src/fm/logic/storage/disc/linux/file/property/size.hpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="104" topLine="6" />
+			<Cursor1 position="1127" topLine="15" />
 		</Cursor>
 	</File>
-	<File name="../src/fm/logic/storage/disc/linux/device/property/size.cpp" open="0" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="../src/fm/logic/storage/pure/file.hpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="284" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="../src/fm/logic/storage/disc/linux/file/property/name.hpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="1354" topLine="18" />
-		</Cursor>
-	</File>
-	<File name="../src/fm/logic/storage/disc/linux/device/property/size.hpp" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="653" topLine="15" />
-		</Cursor>
-	</File>
-	<File name="../src/fm/logic/storage/pure/property.hpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="968" topLine="21" />
-		</Cursor>
-	</File>
-	<File name="../src/fm/logic/storage/disc/linux/manager.cpp" open="0" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="114" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="../src/fm/logic/storage/disc/linux/file/property/name.cpp" open="0" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="624" topLine="10" />
-		</Cursor>
-	</File>
-	<File name="../src/fm/logic/storage/disc/linux/device/property/name.cpp" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="400" topLine="0" />
+			<Cursor1 position="1881" topLine="32" />
 		</Cursor>
 	</File>
 	<File name="../src/fm/type/size.hpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -81,9 +36,29 @@
 			<Cursor1 position="75" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="../src/fm/logic/storage/disc/ms/manager.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="../src/fm/logic/storage/disc/linux/file/property/name.cpp" open="0" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="24" topLine="0" />
+			<Cursor1 position="698" topLine="3" />
+		</Cursor>
+	</File>
+	<File name="../src/fm/logic/storage/disc/linux/device/property/size.cpp" open="0" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="284" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="../src/fm/logic/storage/pure/pure.hpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="18" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="../src/fm/logic/storage/disc/file.hpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="768" topLine="10" />
+		</Cursor>
+	</File>
+	<File name="../src/fm/logic/storage/disc/linux/device/property/name.cpp" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="400" topLine="0" />
 		</Cursor>
 	</File>
 	<File name="../src/fm/logic/storage/disc/linux/device/property/folder.cpp" open="0" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -91,14 +66,24 @@
 			<Cursor1 position="451" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="../src/fm/main/main.cpp" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="../src/fm/logic/storage/disc/linux/file/property/size.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="722" topLine="0" />
+			<Cursor1 position="229" topLine="1" />
 		</Cursor>
 	</File>
-	<File name="../src/fm/logic/storage/pure/file.hpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="../src/fm/logic/storage/disc/linux/device.cpp" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="1863" topLine="44" />
+			<Cursor1 position="2159" topLine="67" />
+		</Cursor>
+	</File>
+	<File name="../src/fm/logic/storage/disc/linux/manager.cpp" open="0" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="114" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="../src/fm/main/main.cpp" open="1" top="1" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="593" topLine="0" />
 		</Cursor>
 	</File>
 	<File name="../src/fm/logic/storage/pure/device.hpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -106,14 +91,19 @@
 			<Cursor1 position="2602" topLine="18" />
 		</Cursor>
 	</File>
-	<File name="../src/fm/logic/storage/disc/linux/device/property/folder.hpp" open="0" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="../src/fm/logic/storage/disc/ms/manager.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="950" topLine="7" />
+			<Cursor1 position="24" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="../src/fm/logic/storage/pure/manager.hpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="../src/fm/logic/storage/disc/property.hpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="1328" topLine="15" />
+			<Cursor1 position="104" topLine="6" />
+		</Cursor>
+	</File>
+	<File name="../src/fm/logic/storage/disc/linux/file/property/name.hpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="404" topLine="15" />
 		</Cursor>
 	</File>
 	<File name="../src/fm/logic/storage/disc/manager.hpp" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -121,14 +111,24 @@
 			<Cursor1 position="713" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="../src/fm/logic/storage/disc/linux/file.cpp" open="1" top="1" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="../src/fm/logic/storage/disc/linux/device/property/name.hpp" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="332" topLine="2" />
+			<Cursor1 position="924" topLine="18" />
 		</Cursor>
 	</File>
-	<File name="../src/fm/logic/storage/disc/linux/device.cpp" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="../src/fm/logic/storage/pure/property.hpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="1985" topLine="59" />
+			<Cursor1 position="968" topLine="21" />
+		</Cursor>
+	</File>
+	<File name="../src/fm/logic/storage/pure/manager.hpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1328" topLine="15" />
+		</Cursor>
+	</File>
+	<File name="../src/fm/logic/storage/disc/linux/file.cpp" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="332" topLine="2" />
 		</Cursor>
 	</File>
 </CodeBlocks_layout_file>

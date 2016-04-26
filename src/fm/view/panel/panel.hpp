@@ -1,5 +1,8 @@
 
-#include "reflection/object.hpp"
+
+// fileM::view::panel
+
+#include "reflection/reflection.hpp"
 
 namespace fileM
  {
@@ -11,12 +14,17 @@ namespace fileM
      {
       public:
 
-       panel();
-   	  ~panel();
+        panel();
+   	   ~panel();
 
       //  cursor()
       //  selection()
-      // storage
+      // device::storage
+      // filter
+      // sort
+
+     public:
+      fileM::view::panel::cursor m_cursor;
     }; 	
 
    }

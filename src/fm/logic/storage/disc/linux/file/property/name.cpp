@@ -11,6 +11,7 @@ name_class::name_class( object_type * parent_param, string_type const& name_para
  : property_type( parent_param )
  {
   this->category_type::type() = "string::file::name";
+  m_name = name_param;
  }
 
 name_class::~name_class()
