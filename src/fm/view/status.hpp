@@ -15,7 +15,7 @@ namespace fileM
       public:
         status(){}
        ~status(){}
-     }; 	
+     };
 
    }
  }

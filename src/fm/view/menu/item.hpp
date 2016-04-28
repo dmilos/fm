@@ -1,8 +1,7 @@
 #ifndef fileM_view_menu_item
 #define fileM_view_menu_item
 
-
-#include "reflection/object.hpp"
+#include "reflection/reflection.hpp"
 
 namespace fileM
  {
@@ -12,17 +11,16 @@ namespace fileM
      {
 
       // expect to have property name
-      class item
-       : public virtual ::reflection::object
+      class item_class
+       : public virtual ::reflection::object::structure_class
        {
         public:
-           item(){}
-          ~item(){}
-       }; 	
+           item_class();
+          ~item_class();
+       };
 
      }
    }
  }
 
 #endif
- 

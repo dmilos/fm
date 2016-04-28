@@ -1,6 +1,7 @@
 #ifndef fm_logic_device_pure_property
 #define fm_logic_device_pure_property
 // ::fileM::logic::storage::pure::property_class
+// ::fileM::logic::storage::pure::attribute_type
 
 #include "reflection/reflection.hpp"
 

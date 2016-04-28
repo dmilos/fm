@@ -1,9 +1,13 @@
-#ifndef fileM_view_menu_the_class
-#define fileM_view_menu_the_class
+#ifndef fileM_view_menu_class
+#define fileM_view_menu_class
 
-#include "reflection/object.hpp"
+#include <vector>
+
+#include "reflection/reflection.hpp"
 
 #include "./item.hpp"
+
+
 
 namespace fileM
  {
@@ -12,24 +16,23 @@ namespace fileM
     namespace menu
      {
 
-      class the_class
-       : public virtual ::reflection::object
-       , public         ::fileM::view::menu::item
+      class class_class
+       : public ::fileM::view::menu::item_class
        {
         public:
-          typedef ::fileM::view::menu::item item_type;
-          std::vector<item_type> list_type;
-    
-           the_class();
-     	    ~the_class();
-    
+          typedef ::fileM::view::menu::item_class item_type;
+
+          typedef std::vector<item_type> list_type;
+
+           class_class();
+          ~class_class();
+
         private:
            list_type m_list;
-      }; 	
+      };
 
      }
    }
  }
 
 #endif
- 

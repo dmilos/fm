@@ -3,7 +3,17 @@
 
 #include "../logic/logic.hpp"
 
+#include "../logic/logic.hpp"
+
+#include "../view/panel/panel.hpp"
+
 #include "type/ptr/make.hpp"
+
+void p()
+ {
+  ::fileM::view::panel_class panel;
+ }
+
 
 int main( int argc, char *argv[] )
  {

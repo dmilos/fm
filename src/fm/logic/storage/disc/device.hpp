@@ -1,4 +1,4 @@
-#ifndef fm_logic_storage_disc_storage
+#ifndef fm_logic_storage_disc_device
 #define fm_logic_storage_disc_device
 // ::fileM::logic::storage::disc::device_class
 

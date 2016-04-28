@@ -1,3 +1,6 @@
+#ifndef fileM_view_panel_selection
+#define fileM_view_panel_selection
+
 
 // fileM::view:panel::selection
 
@@ -8,12 +11,12 @@ namespace fileM
     namespace panel
      {
 
-      class selection
+      class selection_class
        {
         public:
 
-         selection();
-        ~selection();
+         selection_class();
+        ~selection_class();
 
          //void   list( unsigned group, FM_ListPtr *list );
          //bool   attribs( unsigned group, FM_Attribs const &attribs );
@@ -25,3 +28,5 @@ namespace fileM
      }
    }
  }
+
+#endif

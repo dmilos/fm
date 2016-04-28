@@ -2,7 +2,7 @@
 #define fileM_view_status
 
 
-#include "reflection/object.hpp"
+#include "reflection/reflect.hpp"
 
 namespace fileM
  {
@@ -10,7 +10,7 @@ namespace fileM
    {
 
     class shortcut
-     : public virtual ::reflection::object_class
+     : public virtual ::reflection::object::structure_class
      {
       public:
         shortcut(){}

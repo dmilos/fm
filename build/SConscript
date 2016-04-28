@@ -62,6 +62,15 @@ source += [
 
    ,envObject.StaticObject( **process_source( 'logic/storage/disc/linux/file/property/name.cpp' ) )
    ,envObject.StaticObject( **process_source( 'logic/storage/disc/linux/file/property/size.cpp' ) )
+
+   ,envObject.StaticObject( **process_source( 'view/panel/panel.cpp' ) )
+   ,envObject.StaticObject( **process_source( 'view/panel/color/base.cpp' ) )
+   ,envObject.StaticObject( **process_source( 'view/panel/color/custom.cpp' ) )
+   ,envObject.StaticObject( **process_source( 'view/panel/cursor.cpp' ) )
+   ,envObject.StaticObject( **process_source( 'view/panel/filter.cpp' ) )
+   ,envObject.StaticObject( **process_source( 'view/panel/selection.cpp' ) )
+   ,envObject.StaticObject( **process_source( 'view/menu/item.cpp' ) )
+   ,envObject.StaticObject( **process_source( 'view/menu/class.cpp' ) )
   ]
 
 # Make native environment
