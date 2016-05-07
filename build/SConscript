@@ -5,10 +5,16 @@ import nucleotide
 Import('settings')
 
 name_full = 'test'
+
+os_name = "linux";
+os_name = "windows";
+#os_name = "std";
+
+
 directory_src = os.path.join( '..','src','fm' )
-directory_pdb = os.path.join( '..','out' )
-directory_obj = os.path.join( '..','out','obj'  )
-directory_bin = os.path.join( '..','out','bin'  )
+directory_pdb = os.path.join( '..','out' ) # :TODO: , os_name
+directory_obj = os.path.join( '..','out','obj', os_name  )
+directory_bin = os.path.join( '..','out','bin', os_name  )
 
 directory_submodule = os.path.join( '..','submodule'  )
 
@@ -29,7 +35,7 @@ settings.accumulate( 'source:c++', { 'dialect' : 'c++11' } )
 settings.accumulate( 'RTTI', { 'enable': 'false' } )
 settings.accumulate( 'compiler:configuration', { 'name'          : configuration  } )
 settings.accumulate( 'compiler:optimisation',  { 'configuration' : configuration  } )
-settings.accumulate( 'compiler:version',  { 'msvc' : [ '12.0' ]  } )
+settings.accumulate( 'compiler:version',  { 'msvc' : [ '14.0' ]  } )
 
 settings.accumulate( 'PDB', { 'configuration': configuration , 'synchronous' : 'false', 'file-name': os.path.join( directory_pdb, name_full + '.pdb' ) } )
 settings.accumulate( 'RTL', { 'configuration' : configuration, 'type': settings.get_custom( 'RTL' ) } )
@@ -49,19 +55,20 @@ def process_source( source_path ):
     }
     return args
 
+
 source = []
 source += [
     envObject.StaticObject( **process_source( 'main/main.cpp' ) )
-   ,envObject.StaticObject( **process_source( 'logic/storage/disc/linux/device.cpp' ) )
-   ,envObject.StaticObject( **process_source( 'logic/storage/disc/linux/manager.cpp' ) )
-   ,envObject.StaticObject( **process_source( 'logic/storage/disc/linux/file.cpp' ) )
+   ,envObject.StaticObject( **process_source( 'logic/storage/disc/' + os_name + '/device.cpp' ) )
+   ,envObject.StaticObject( **process_source( 'logic/storage/disc/' + os_name + '/manager.cpp' ) )
+   ,envObject.StaticObject( **process_source( 'logic/storage/disc/' + os_name + '/file.cpp' ) )
 
-   ,envObject.StaticObject( **process_source( 'logic/storage/disc/linux/device/property/folder.cpp' ) )
-   ,envObject.StaticObject( **process_source( 'logic/storage/disc/linux/device/property/name.cpp' ) )
-   ,envObject.StaticObject( **process_source( 'logic/storage/disc/linux/device/property/size.cpp' ) )
+   ,envObject.StaticObject( **process_source( 'logic/storage/disc/' + os_name + '/device/property/folder.cpp' ) )
+   ,envObject.StaticObject( **process_source( 'logic/storage/disc/' + os_name + '/device/property/name.cpp' ) )
+   ,envObject.StaticObject( **process_source( 'logic/storage/disc/' + os_name + '/device/property/size.cpp' ) )
 
-   ,envObject.StaticObject( **process_source( 'logic/storage/disc/linux/file/property/name.cpp' ) )
-   ,envObject.StaticObject( **process_source( 'logic/storage/disc/linux/file/property/size.cpp' ) )
+   ,envObject.StaticObject( **process_source( 'logic/storage/disc/' + os_name + '/file/property/name.cpp' ) )
+   ,envObject.StaticObject( **process_source( 'logic/storage/disc/' + os_name + '/file/property/size.cpp' ) )
 
    ,envObject.StaticObject( **process_source( 'view/panel/panel.cpp' ) )
    ,envObject.StaticObject( **process_source( 'view/panel/color/base.cpp' ) )
@@ -77,7 +84,7 @@ source += [
 envProgram = nucleotide.Environment( settings ).native()
 
 # Create program
-program = envProgram.Program( target =  os.path.join( directory_bin, 'main' ) + envProgram['PROGSUFFIX'], source = source )
+program = envProgram.Program( target = os.path.join( directory_bin, 'main-' + os_name ) + envProgram['PROGSUFFIX'], source = source )
 
 # ... and return!
 Return( 'program' )

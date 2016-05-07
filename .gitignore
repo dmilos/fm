@@ -1,3 +1,9 @@
 out
 /build/*.dblite
 *.bak
+/build/vs2013/Debug/fm_vs2013.log
+/build/vs2013/fm_vs2013.opensdf
+/build/vs2013/fm_vs2013.sdf
+/build/vs2013/fm_vs2013.v12.suo
+/build/vs2013/fm_vs2013.vcxproj.user
+/src/fm/logic/storage/.docstates.suo

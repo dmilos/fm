@@ -5,7 +5,7 @@
 
 #include "../../../../pure/file.hpp"
 
-using namespace fileM::logic::storage::disc::linux::file::property;
+using namespace fileM::logic::storage::disc::windows::file::property;
 
 size_class::size_class( object_type * parent_param, size_type const& size_param )
  : property_type( parent_param )

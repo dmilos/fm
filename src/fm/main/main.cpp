@@ -29,10 +29,11 @@ int main( int argc, char *argv[] )
   ::fileM::logic::storage::pure::file_list_type list;
 
   ::fileM::logic::storage::pure::attribute_type filter;
-  filter.emplace( "folder", ::memory::pointer::make( ::fileM::logic::storage::pure::property::string_class{  "/home/dex"} ) );
+  //filter.emplace( "folder", ::memory::pointer::make( ::fileM::logic::storage::pure::property::string_class{  "/home/dex"} ) );
+  filter.emplace( "folder", ::memory::pointer::make( ::fileM::logic::storage::pure::property::string_class{  "c:\\work"} ) );
   filter.emplace( "name",   ::memory::pointer::make( ::fileM::logic::storage::pure::property::string_class{  "*.*"  } ) );
 
-  d.list( list, filter, 0, 10 );
+  d.list( list, filter, 2, 5 );
 
   std::cout << "----" << std::endl;
   for( auto const& file: list )

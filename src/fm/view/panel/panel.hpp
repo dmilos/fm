@@ -12,6 +12,7 @@
 #include "./selection.hpp"
 #include "./filter.hpp"
 #include "./cursor.hpp"
+#include "./action.hpp"
 
 #include "../../logic/storage/pure/device.hpp"
 
@@ -36,7 +37,7 @@ namespace fileM
        ::fileM::view::panel::sort_type        m_sort;
        ::fileM::view::panel::filter_class     m_filter;
        ::fileM::view::panel::selection_class  m_selection;
-
+       ::fileM::view::panel::action_class     m_action;
      public:
        ::fileM::logic::storage::pure::device_pointer_type m_device;
     };
