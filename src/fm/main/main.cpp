@@ -30,8 +30,8 @@ int main( int argc, char *argv[] )
 
   ::fileM::logic::storage::pure::attribute_type filter;
   //filter.emplace( "folder", ::memory::pointer::make( ::fileM::logic::storage::pure::property::string_class{  "/home/dex"} ) );
-  filter.emplace( "folder", ::memory::pointer::make( ::fileM::logic::storage::pure::property::string_class{  "c:\\work"} ) );
-  filter.emplace( "name",   ::memory::pointer::make( ::fileM::logic::storage::pure::property::string_class{  "*.*"  } ) );
+  filter.emplace( "folder", ::memory::pointer::make( ::fileM::logic::storage::pure::property::string_type{  "c:\\work"} ) );
+  filter.emplace( "name",   ::memory::pointer::make( ::fileM::logic::storage::pure::property::string_type{  "*.*"  } ) );
 
   d.list( list, filter, 2, 5 );
 

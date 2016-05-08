@@ -28,7 +28,7 @@ namespace fileM
         class device_class;
 
         class file_class
-         : public ::reflection::object::structure_class
+         : public ::reflection::object::structure_class<>
          {
           public:
 

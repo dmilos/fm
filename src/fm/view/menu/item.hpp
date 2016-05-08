@@ -12,7 +12,7 @@ namespace fileM
 
       // expect to have property name
       class item_class
-       : public virtual ::reflection::object::structure_class
+       : public virtual ::reflection::object::structure_class<>
        {
         public:
            item_class();

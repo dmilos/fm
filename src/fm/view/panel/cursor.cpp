@@ -17,7 +17,7 @@ bool       cursor_class::up( void )
  {
   if( 0 == m_position )
    {
-   	return false;
+    return false;
    }
   m_position --;
   return true;
@@ -27,7 +27,7 @@ bool       cursor_class::down( void )
  {
   if( m_max == m_position + 1 )
    {
-   	return false;
+    return false;
    }
 
   m_position ++;

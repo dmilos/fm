@@ -21,14 +21,14 @@ namespace fileM
        {
 
         class custom_class
-         : public ::reflection::object::structure_class
+         : public ::reflection::object::structure_class<>
          {
           public:
             typedef ::fileM::type::color_type   color_type;
             typedef std::map< ::fileM::logic::storage::pure::attribute_type, color_type > custom_type;
 
             custom_class();
-       	   ~custom_class();
+           ~custom_class();
 
 
            custom_type m_custom;

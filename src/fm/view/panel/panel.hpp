@@ -22,12 +22,12 @@ namespace fileM
    {
 
     class panel_class
-     : public ::reflection::object::structure_class
+     : public ::reflection::object::structure_class<>
      {
       public:
 
         panel_class();
-   	   ~panel_class();
+       ~panel_class();
 
      public:
        ::fileM::view::panel::cursor_class         m_cursor;

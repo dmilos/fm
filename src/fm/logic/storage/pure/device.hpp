@@ -9,6 +9,7 @@
 #include "../../../type/string.hpp"
 
 #include "./property.hpp"
+//#include "./pattern.hpp"
 
 #include "./file.hpp"
 
@@ -22,10 +23,10 @@ namespace fileM
       namespace pure
        {
 
-       	class manager_class;
+        class manager_class;
 
         class device_class
-         : public ::reflection::object::structure_class
+         : public ::reflection::object::structure_class<>
          {
           public:
 

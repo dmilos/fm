@@ -18,16 +18,16 @@ namespace fileM
        {
 
         class base_class
-         : public ::reflection::object::structure_class
+         : public ::reflection::object::structure_class<>
          {
           public:
 
-            typedef ::reflection::object::structure_class structure_type;
-            typedef ::fileM::type::string_type string_type;
-            typedef ::fileM::type::color_type   color_type;
+            typedef ::reflection::object::structure_class<> structure_type;
+            typedef ::fileM::type::string_type                 string_type;
+            typedef ::fileM::type::color_type                   color_type;
 
             base_class();
-       	   ~base_class();
+           ~base_class();
 
            bool       set( string_type const& name, color_type const& );
            color_type get( string_type const& name )const;

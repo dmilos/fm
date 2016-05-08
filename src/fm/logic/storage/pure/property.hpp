@@ -26,8 +26,8 @@ namespace fileM
            typedef ::fileM::type::data_type data_type;
            typedef ::fileM::type::size_type size_type;
 
-           typedef ::reflection::object::structure_class  object_type;
-           typedef ::reflection::object::structure_class* object_ptr_type;
+           typedef ::reflection::object::structure_class<>  object_type;
+           typedef ::reflection::object::structure_class<>* object_ptr_type;
 
            typedef ::fileM::logic::storage::pure::property_class this_type;
 

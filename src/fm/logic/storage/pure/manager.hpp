@@ -20,7 +20,7 @@ namespace fileM
        {
 
         class manager_class
-         : public ::reflection::object::structure_class
+         : public ::reflection::object::structure_class<>
          {
           public:
 

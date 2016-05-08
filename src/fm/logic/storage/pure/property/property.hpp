@@ -1,2 +1,1 @@
-#include "./size.hpp"
-#include "./string.hpp"
+#include "./generic.hpp"

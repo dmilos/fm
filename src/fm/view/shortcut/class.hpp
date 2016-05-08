@@ -20,10 +20,9 @@ namespace fileM
        // favorites
        // often
        // presets0..N somethng like favorite but short list of 10 items
-     }; 	
+     };
 
    }
  }
 
 #endif
- 
