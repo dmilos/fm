@@ -9,7 +9,7 @@
 #include "../../../type/string.hpp"
 
 #include "./property.hpp"
-//#include "./pattern.hpp"
+#include "./filter.hpp"
 
 #include "./file.hpp"
 
@@ -34,7 +34,7 @@ namespace fileM
             typedef ::fileM::type::string_type        string_type;
 
             typedef ::fileM::logic::storage::pure::property_class  property_type;
-            typedef ::fileM::logic::storage::pure::attribute_type  attribute_type;
+            typedef ::fileM::logic::storage::pure::filter_class      filter_type;
 
             typedef ::fileM::logic::storage::pure::file_class         file_type;
             typedef ::fileM::logic::storage::pure::file_list_type     file_list_type;
@@ -67,7 +67,7 @@ namespace fileM
             virtual bool         refresh()const=0;
 
             virtual size_type    size()=0;
-            virtual size_type    list( file_list_type & list, attribute_type const& filter_param, size_type const& begin, size_type const& size )=0;
+            virtual size_type    list( file_list_type & list, filter_type const& filter_param, size_type const& begin, size_type const& size )=0;
 
           public:
             listener_type const& listener()const{ return m_listener; }

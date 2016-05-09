@@ -3,8 +3,6 @@
 
 #include "../logic/logic.hpp"
 
-#include "../logic/logic.hpp"
-
 #include "../view/panel/panel.hpp"
 
 #include "type/ptr/make.hpp"
@@ -12,6 +10,7 @@
 void p()
  {
   ::fileM::view::panel_class panel;
+   //panel.m_
  }
 
 
@@ -28,10 +27,12 @@ int main( int argc, char *argv[] )
 
   ::fileM::logic::storage::pure::file_list_type list;
 
-  ::fileM::logic::storage::pure::attribute_type filter;
-  //filter.emplace( "folder", ::memory::pointer::make( ::fileM::logic::storage::pure::property::string_class{  "/home/dex"} ) );
-  filter.emplace( "folder", ::memory::pointer::make( ::fileM::logic::storage::pure::property::string_type{  "c:\\work"} ) );
-  filter.emplace( "name",   ::memory::pointer::make( ::fileM::logic::storage::pure::property::string_type{  "*.*"  } ) );
+  ::fileM::logic::storage::pure::filter_class filter;
+
+//filter.insert( "folder", ::reflection::object::structure_class<>::item_type( ::memory::pointer::make( ::reflection::property::inspect::simple( ::fileM::type::string_type("/home/dex") ) ) ) );
+  filter.insert( "folder", ::reflection::object::structure_class<>::item_type( ::memory::pointer::make( ::reflection::property::inspect::simple( ::fileM::type::string_type("c:\\work") ) ) ) );
+
+  filter.insert( "name", ::reflection::object::structure_class<>::item_type( ::memory::pointer::make( ::reflection::property::inspect::simple( ::fileM::type::string_type("*.*") ) ) ) );
 
   d.list( list, filter, 2, 5 );
 

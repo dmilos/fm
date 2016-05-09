@@ -60,6 +60,57 @@
     <Filter Include="Source Files\logic\storage\disc\linux">
       <UniqueIdentifier>{4c5a86af-2f91-4dc9-8f38-73e7d1d94336}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\view\panel\color">
+      <UniqueIdentifier>{cc9d21ae-e2de-4ef8-abb4-8fd695b06577}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\logic\storage\pure\pattern">
+      <UniqueIdentifier>{f284a096-b8de-46e8-a10a-6e9f6e699259}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\logic\storage\pure\property">
+      <UniqueIdentifier>{3e36a105-71e6-4b1c-82ba-ba9e4c296cb4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\logic\storage\disc\std">
+      <UniqueIdentifier>{86519452-ae50-47b7-824f-49a0134f533e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\logic\storage\disc\windows">
+      <UniqueIdentifier>{c7813219-dc22-4cd2-9f9a-e3db495d72df}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\logic\storage\disc\linux\device">
+      <UniqueIdentifier>{1526f529-e72b-46c1-a8d8-1a1025c74083}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\logic\storage\disc\linux\file">
+      <UniqueIdentifier>{fb8bb698-c106-42b0-817c-88c51aa5e134}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\logic\storage\disc\linux\file\property">
+      <UniqueIdentifier>{5fbbefbb-513d-42ec-8fce-17ace03904ee}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\logic\storage\disc\linux\device\property">
+      <UniqueIdentifier>{a404448d-b317-4599-aeda-61cdeaa69e3f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\logic\storage\disc\windows\device">
+      <UniqueIdentifier>{3506ebf1-6289-4219-8a92-5a9cc9910e9e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\logic\storage\disc\windows\file">
+      <UniqueIdentifier>{9d1ca11f-0aab-4cc0-91f2-bdd0a4d06df8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\logic\storage\disc\windows\file\property">
+      <UniqueIdentifier>{ae01edf5-7fa7-47cc-b22e-e97f0ae6b57b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\logic\storage\disc\windows\device\property">
+      <UniqueIdentifier>{b65bb983-38bc-48ad-ae3e-f63f73c12abe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\logic\storage\disc\std\device">
+      <UniqueIdentifier>{1d740fea-7f46-4f12-ac1f-4327fde88850}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\logic\storage\disc\std\file">
+      <UniqueIdentifier>{157d7c6c-b0de-4305-8001-4d950c6cbf86}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\logic\storage\disc\std\file\property">
+      <UniqueIdentifier>{752dc2e5-5389-4f9c-b13d-8b051e6fc404}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\logic\storage\disc\std\device\property">
+      <UniqueIdentifier>{c6d2febf-2d5c-4672-b17f-09ccdfc8ff3e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="readme.txt" />
@@ -68,5 +119,265 @@
     <ClCompile Include="..\..\src\fm\main\main.cpp">
       <Filter>Source Files\main</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\src\fm\view\menu\class.cpp">
+      <Filter>Source Files\view\menu</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\fm\view\menu\item.cpp">
+      <Filter>Source Files\view\menu</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\fm\view\panel\cursor.cpp">
+      <Filter>Source Files\view\panel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\fm\view\panel\filter.cpp">
+      <Filter>Source Files\view\panel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\fm\view\panel\panel.cpp">
+      <Filter>Source Files\view\panel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\fm\view\panel\selection.cpp">
+      <Filter>Source Files\view\panel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\fm\view\panel\color\base.cpp">
+      <Filter>Source Files\view\panel\color</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\fm\view\panel\color\custom.cpp">
+      <Filter>Source Files\view\panel\color</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\fm\logic\storage\disc\linux\device.cpp">
+      <Filter>Source Files\logic\storage\disc\linux</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\fm\logic\storage\disc\linux\file.cpp">
+      <Filter>Source Files\logic\storage\disc\linux</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\fm\logic\storage\disc\linux\manager.cpp">
+      <Filter>Source Files\logic\storage\disc\linux</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\fm\logic\storage\disc\windows\device.cpp">
+      <Filter>Source Files\logic\storage\disc\windows</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\fm\logic\storage\disc\windows\file.cpp">
+      <Filter>Source Files\logic\storage\disc\windows</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\fm\logic\storage\disc\windows\manager.cpp">
+      <Filter>Source Files\logic\storage\disc\windows</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\fm\logic\storage\disc\std\device.cpp">
+      <Filter>Source Files\logic\storage\disc\std</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\fm\logic\storage\disc\std\file.cpp">
+      <Filter>Source Files\logic\storage\disc\std</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\fm\logic\storage\disc\std\manager.cpp">
+      <Filter>Source Files\logic\storage\disc\std</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\fm\logic\storage\disc\linux\file\property\name.cpp">
+      <Filter>Source Files\logic\storage\disc\linux\file\property</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\fm\logic\storage\disc\linux\file\property\size.cpp">
+      <Filter>Source Files\logic\storage\disc\linux\file\property</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\fm\logic\storage\disc\linux\device\property\folder.cpp">
+      <Filter>Source Files\logic\storage\disc\linux\device\property</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\fm\logic\storage\disc\linux\device\property\name.cpp">
+      <Filter>Source Files\logic\storage\disc\linux\device\property</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\fm\logic\storage\disc\linux\device\property\size.cpp">
+      <Filter>Source Files\logic\storage\disc\linux\device\property</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\fm\logic\storage\disc\windows\file\property\name.cpp">
+      <Filter>Source Files\logic\storage\disc\windows\file\property</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\fm\logic\storage\disc\windows\file\property\size.cpp">
+      <Filter>Source Files\logic\storage\disc\windows\file\property</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\fm\logic\storage\disc\windows\device\property\folder.cpp">
+      <Filter>Source Files\logic\storage\disc\windows\device\property</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\fm\logic\storage\disc\windows\device\property\name.cpp">
+      <Filter>Source Files\logic\storage\disc\windows\device\property</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\fm\logic\storage\disc\windows\device\property\size.cpp">
+      <Filter>Source Files\logic\storage\disc\windows\device\property</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\fm\logic\storage\disc\std\file\property\name.cpp">
+      <Filter>Source Files\logic\storage\disc\std\file\property</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\fm\logic\storage\disc\std\file\property\size.cpp">
+      <Filter>Source Files\logic\storage\disc\std\file\property</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\fm\logic\storage\disc\std\device\property\folder.cpp">
+      <Filter>Source Files\logic\storage\disc\std\device\property</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\fm\logic\storage\disc\std\device\property\name.cpp">
+      <Filter>Source Files\logic\storage\disc\std\device\property</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\fm\logic\storage\disc\std\device\property\size.cpp">
+      <Filter>Source Files\logic\storage\disc\std\device\property</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\src\fm\view\menu\class.hpp">
+      <Filter>Source Files\view\menu</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\fm\view\menu\item.hpp">
+      <Filter>Source Files\view\menu</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\fm\view\panel\action.hpp">
+      <Filter>Source Files\view\panel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\fm\view\panel\cursor.hpp">
+      <Filter>Source Files\view\panel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\fm\view\panel\filter.hpp">
+      <Filter>Source Files\view\panel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\fm\view\panel\panel.hpp">
+      <Filter>Source Files\view\panel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\fm\view\panel\selection.hpp">
+      <Filter>Source Files\view\panel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\fm\view\panel\sort.hpp">
+      <Filter>Source Files\view\panel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\fm\view\shortcut\class.hpp">
+      <Filter>Source Files\view\shortcut</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\fm\view\shortcut\favorites.hpp">
+      <Filter>Source Files\view\shortcut</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\fm\view\shortcut\history.hpp">
+      <Filter>Source Files\view\shortcut</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\fm\view\shortcut\often.hpp">
+      <Filter>Source Files\view\shortcut</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\fm\view\shortcut\preset.hpp">
+      <Filter>Source Files\view\shortcut</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\fm\view\selector.hpp">
+      <Filter>Source Files\view</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\fm\view\status.hpp">
+      <Filter>Source Files\view</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\fm\view\panel\color\base.hpp">
+      <Filter>Source Files\view\panel\color</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\fm\view\panel\color\custom.hpp">
+      <Filter>Source Files\view\panel\color</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\fm\logic\logic.hpp">
+      <Filter>Source Files\logic</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\fm\logic\storage\storage.hpp">
+      <Filter>Source Files\logic\storage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\fm\logic\storage\pure\device.hpp">
+      <Filter>Source Files\logic\storage\pure</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\fm\logic\storage\pure\file.hpp">
+      <Filter>Source Files\logic\storage\pure</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\fm\logic\storage\pure\manager.hpp">
+      <Filter>Source Files\logic\storage\pure</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\fm\logic\storage\pure\pattern.hpp">
+      <Filter>Source Files\logic\storage\pure</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\fm\logic\storage\pure\property.hpp">
+      <Filter>Source Files\logic\storage\pure</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\fm\logic\storage\pure\pure.hpp">
+      <Filter>Source Files\logic\storage\pure</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\fm\logic\storage\pure\property\generic.hpp">
+      <Filter>Source Files\logic\storage\pure\property</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\fm\logic\storage\pure\property\property.hpp">
+      <Filter>Source Files\logic\storage\pure\property</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\fm\logic\storage\pure\pattern\generic.hpp">
+      <Filter>Source Files\logic\storage\pure\pattern</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\fm\logic\storage\disc\device.hpp">
+      <Filter>Source Files\logic\storage\disc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\fm\logic\storage\disc\disc.hpp">
+      <Filter>Source Files\logic\storage\disc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\fm\logic\storage\disc\file.hpp">
+      <Filter>Source Files\logic\storage\disc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\fm\logic\storage\disc\manager.hpp">
+      <Filter>Source Files\logic\storage\disc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\fm\logic\storage\disc\property.hpp">
+      <Filter>Source Files\logic\storage\disc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\fm\logic\storage\disc\linux\file\property\name.hpp">
+      <Filter>Source Files\logic\storage\disc\linux\file\property</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\fm\logic\storage\disc\linux\file\property\property.hpp">
+      <Filter>Source Files\logic\storage\disc\linux\file\property</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\fm\logic\storage\disc\linux\file\property\size.hpp">
+      <Filter>Source Files\logic\storage\disc\linux\file\property</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\fm\logic\storage\disc\linux\device\property\folder.hpp">
+      <Filter>Source Files\logic\storage\disc\linux\device\property</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\fm\logic\storage\disc\linux\device\property\name.hpp">
+      <Filter>Source Files\logic\storage\disc\linux\device\property</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\fm\logic\storage\disc\linux\device\property\property.hpp">
+      <Filter>Source Files\logic\storage\disc\linux\device\property</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\fm\logic\storage\disc\linux\device\property\size.hpp">
+      <Filter>Source Files\logic\storage\disc\linux\device\property</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\fm\logic\storage\disc\windows\file\property\name.hpp">
+      <Filter>Source Files\logic\storage\disc\windows\file\property</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\fm\logic\storage\disc\windows\file\property\property.hpp">
+      <Filter>Source Files\logic\storage\disc\windows\file\property</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\fm\logic\storage\disc\windows\file\property\size.hpp">
+      <Filter>Source Files\logic\storage\disc\windows\file\property</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\fm\logic\storage\disc\windows\device\property\folder.hpp">
+      <Filter>Source Files\logic\storage\disc\windows\device\property</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\fm\logic\storage\disc\windows\device\property\name.hpp">
+      <Filter>Source Files\logic\storage\disc\windows\device\property</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\fm\logic\storage\disc\windows\device\property\property.hpp">
+      <Filter>Source Files\logic\storage\disc\windows\device\property</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\fm\logic\storage\disc\windows\device\property\size.hpp">
+      <Filter>Source Files\logic\storage\disc\windows\device\property</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\fm\logic\storage\disc\std\file\property\name.hpp">
+      <Filter>Source Files\logic\storage\disc\std\file\property</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\fm\logic\storage\disc\std\file\property\property.hpp">
+      <Filter>Source Files\logic\storage\disc\std\file\property</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\fm\logic\storage\disc\std\file\property\size.hpp">
+      <Filter>Source Files\logic\storage\disc\std\file\property</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\fm\logic\storage\disc\std\device\property\folder.hpp">
+      <Filter>Source Files\logic\storage\disc\std\device\property</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\fm\logic\storage\disc\std\device\property\name.hpp">
+      <Filter>Source Files\logic\storage\disc\std\device\property</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\fm\logic\storage\disc\std\device\property\property.hpp">
+      <Filter>Source Files\logic\storage\disc\std\device\property</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\fm\logic\storage\disc\std\device\property\size.hpp">
+      <Filter>Source Files\logic\storage\disc\std\device\property</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

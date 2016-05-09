@@ -3,6 +3,7 @@
 
 #include "../../type/color.hpp"
 
+#include "../../logic/storage/pure/filter.hpp"
 #include "../../logic/storage/pure/file.hpp"
 
 namespace fileM
@@ -18,8 +19,8 @@ namespace fileM
           typedef ::fileM::type::color_type color_type;
 
           typedef ::fileM::logic::storage::pure::file_class          file_type;
-          typedef ::fileM::logic::storage::pure::attribute_type attribute_type;
-          typedef std::map< attribute_type, color_type>            scheme_type;
+          typedef ::fileM::logic::storage::pure::filter_class      filter_type;
+          typedef std::map< filter_type, color_type>               scheme_type;
         public:
           filter_class();
          ~filter_class();

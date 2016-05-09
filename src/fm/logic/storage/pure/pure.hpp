@@ -2,3 +2,6 @@
 #include "./file.hpp"
 #include "./manager.hpp"
 #include "./property/property.hpp"
+#include "./pattern/pattern.hpp"
+#include "./pattern.hpp"
+#include "./filter.hpp"

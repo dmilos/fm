@@ -34,10 +34,6 @@ namespace fileM
 
          };
 
-        typedef ::fileM::logic::storage::pure::pattern_class pattern_pointer_type;
-
-        typedef std::map< ::fileM::type::string_type, pattern_pointer_type * > filter_type;
-
        }
      }
    }

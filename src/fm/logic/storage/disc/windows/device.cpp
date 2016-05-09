@@ -57,13 +57,23 @@ device_class::size()
 #pragma comment(lib, "User32.lib")
 
 device_class::size_type
-device_class::list( file_list_type & list, attribute_type const& filter_param, size_type const& begin_param, size_type const& size_param )
+device_class::list( file_list_type & list, filter_type const& filter_param, size_type const& begin_param, size_type const& size_param )
  {
-  auto folder_iter = filter_param.find( "folder" ); if( folder_iter == filter_param.end() ) { return 0; }
-  string_type const& folder = ::reflection::property::inspect::present< string_type const& >( dynamic_cast< ::reflection::property::pure_class const&> ( *(folder_iter->second) ) );
+  ::reflection::property::pure_class const& folder_property = filter_param.get( "folder" ); 
 
-  auto name_iter = filter_param.find( "name" ); if( name_iter == filter_param.end() ) { return 0; }
-  string_type const& name   = ::reflection::property::inspect::present< string_type const& >( dynamic_cast< ::reflection::property::pure_class const&> ( *(name_iter->second) ) );
+  if( false == ::reflection::property::inspect::check< string_type const& >( folder_property ) )
+   {
+    return 0;
+   }
+  string_type const& folder = ::reflection::property::inspect::present< string_type const& >( folder_property );
+
+
+  ::reflection::property::pure_class const& name_property = filter_param.get( "name" ); 
+  if( false == ::reflection::property::inspect::check< string_type const& >( name_property ) )
+   {
+    return 0;
+   }
+  string_type const& name = ::reflection::property::inspect::present< string_type const& >( name_property );
 
   string_type file_pattern = folder + "\\" + name;
 
@@ -80,12 +90,12 @@ device_class::list( file_list_type & list, attribute_type const& filter_param, s
 
   while( true )
    {
+    auto file = file_pointer_type{ new ::fileM::logic::storage::disc::file_class{ this,  ffd.cFileName } };
 
-    //auto const& file_name = TODO;
-    //// TODO if( false == match( filter_param ) )
-    //// TODO  {
-    //// TODO   goto label_continue;
-    //// TODO  }
+    if( false == filter_param.match( *file ) )
+     {
+      goto label_continue;
+     }
 
     ++index;
     if( index <= begin_param )
@@ -94,7 +104,7 @@ device_class::list( file_list_type & list, attribute_type const& filter_param, s
      }
 
     ++size;
-    list.push_back( file_pointer_type{ new ::fileM::logic::storage::disc::file_class{ this,  ffd.cFileName } } );
+    list.push_back( file );
 
     if( size_param <= size )
      {

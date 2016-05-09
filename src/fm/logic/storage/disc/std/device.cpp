@@ -54,7 +54,7 @@ device_class::size()
 #include <iomanip>
 
 device_class::size_type
-device_class::list( file_list_type & list, attribute_type const& filter_param, size_type const& begin_param, size_type const& size_param )
+device_class::list( file_list_type & list, filter_type const& filter_param, size_type const& begin_param, size_type const& size_param )
  {
   auto folder_iter = filter_param.find( "folder" ); if( folder_iter == filter_param.end() ) { return 0; }
   string_type const& folder = ::reflection::property::inspect::present< string_type const& >( dynamic_cast< ::reflection::property::pure_class const&> ( *(folder_iter->second) ) );

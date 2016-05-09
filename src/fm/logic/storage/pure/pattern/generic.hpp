@@ -1,7 +1,7 @@
 #ifndef fm_logic_storage_pure_pattern_generic
 #define fm_logic_storage_pure_pattern_generic
 
-// ::fileM::logic::storage::pure::pattern::generic_class
+// ::fileM::logic::storage::pure::pattern::generic_class<type_name>
 
 #include "../../../../type/size.hpp"
 
@@ -25,13 +25,50 @@ namespace fileM
              {
               public:
                 typedef type_name type_type;
+
+
                 typedef std::function< bool ( type_name const& )> function_type;
 
+                typedef ::fileM::type::string_type        string_type; 
+
+                typedef ::reflection::property::pure_class              pure_type;
                 typedef ::fileM::logic::storage::pure::pattern_class pattern_type;
 
-                generic_class( function_type const& function_param ){ }
+                generic_class( string_type const& name_param, function_type const& function_param =[]( type_name const& ){ return true;}  )
+                 :m_function( function_param )
+                 {
+                 }
 
                ~generic_class(){}
+
+              public:
+               virtual bool match( file_type const& file_param )const
+                {
+                 auto value_iter = filter_param.find( name() ); 
+                 if( value_iter == filter_param.end() ) 
+                  {
+                   return true; 
+                  }
+
+                 pure_type const& pure = dynamic_cast< pure_type const& const& > ( *(value_iter->second) );
+
+                 if( false == ::reflection::property::inspect::check< type_name const&  > ( pure ) )
+                  {
+                   return false;
+                  }
+
+                 type_name const& value = ::reflection::property::inspect::present< type_name const& >( pure  );
+
+                 return m_function( value );
+                }
+
+              public:
+                        string_type    const& name()const{ return  m_name; }
+                virtual bool                    name( string_type const& name_param ){  m_name = name_param; return bool( true ); }
+              protected:
+                string_type        &  name(){ return  m_name; }
+              private:
+                string_type  m_name;
 
 
               public:  // propertfunction_typ function

@@ -5,7 +5,7 @@
 
 #include <map>
 
-#include "../../../logic/storage/pure/property.hpp"
+#include "../../../logic/storage/pure/filter.hpp"
 
 #include "reflection/reflection.hpp"
 #include "../../../type/color.hpp"
@@ -25,7 +25,9 @@ namespace fileM
          {
           public:
             typedef ::fileM::type::color_type   color_type;
-            typedef std::map< ::fileM::logic::storage::pure::attribute_type, color_type > custom_type;
+            typedef ::fileM::logic::storage::pure::filter_class       filter_type;
+
+            typedef std::map< filter_type, color_type > custom_type;
 
             custom_class();
            ~custom_class();

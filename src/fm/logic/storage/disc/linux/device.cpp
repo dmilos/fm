@@ -71,7 +71,7 @@ device_class::size_type
 device_class::list
  (
    file_list_type & list
-  ,attribute_type const& filter_param
+  ,filter_type const& filter_param
   ,size_type const& begin
   ,size_type const& size
  )
