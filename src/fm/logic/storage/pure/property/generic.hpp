@@ -1,7 +1,7 @@
 #ifndef fm_logic_storage_pure_property_generic
 #define fm_logic_storage_pure_property_generic
 
-// ::fileM::logic::storage::pure::property::generic_class
+// ::fileM::logic::storage::pure::property::generic_class<type_name >
 
 
 #include "../property.hpp"

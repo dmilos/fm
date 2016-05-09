@@ -63,9 +63,11 @@ source += [
    ,envObject.StaticObject( **process_source( 'logic/storage/disc/' + os_name + '/manager.cpp' ) )
    ,envObject.StaticObject( **process_source( 'logic/storage/disc/' + os_name + '/file.cpp' ) )
 
-   ,envObject.StaticObject( **process_source( 'logic/storage/disc/' + os_name + '/device/property/folder.cpp' ) )
+#   ,envObject.StaticObject( **process_source( 'logic/storage/disc/' + os_name + '/device/property/folder.cpp' ) )
+
    ,envObject.StaticObject( **process_source( 'logic/storage/disc/' + os_name + '/device/property/name.cpp' ) )
-   ,envObject.StaticObject( **process_source( 'logic/storage/disc/' + os_name + '/device/property/size.cpp' ) )
+   ,envObject.StaticObject( **process_source( 'logic/storage/disc/' + os_name + '/device/property/capacity.cpp' ) )
+   ,envObject.StaticObject( **process_source( 'logic/storage/disc/' + os_name + '/device/property/occupied.cpp' ) )
 
    ,envObject.StaticObject( **process_source( 'logic/storage/disc/' + os_name + '/file/property/name.cpp' ) )
    ,envObject.StaticObject( **process_source( 'logic/storage/disc/' + os_name + '/file/property/size.cpp' ) )

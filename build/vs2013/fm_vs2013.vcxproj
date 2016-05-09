@@ -68,9 +68,10 @@
     <ClCompile Include="..\..\src\fm\logic\storage\disc\std\file\property\size.cpp" />
     <ClCompile Include="..\..\src\fm\logic\storage\disc\std\manager.cpp" />
     <ClCompile Include="..\..\src\fm\logic\storage\disc\windows\device.cpp" />
+    <ClCompile Include="..\..\src\fm\logic\storage\disc\windows\device\property\capacity.cpp" />
     <ClCompile Include="..\..\src\fm\logic\storage\disc\windows\device\property\folder.cpp" />
     <ClCompile Include="..\..\src\fm\logic\storage\disc\windows\device\property\name.cpp" />
-    <ClCompile Include="..\..\src\fm\logic\storage\disc\windows\device\property\size.cpp" />
+    <ClCompile Include="..\..\src\fm\logic\storage\disc\windows\device\property\occupied.cpp" />
     <ClCompile Include="..\..\src\fm\logic\storage\disc\windows\file.cpp" />
     <ClCompile Include="..\..\src\fm\logic\storage\disc\windows\file\property\name.cpp" />
     <ClCompile Include="..\..\src\fm\logic\storage\disc\windows\file\property\size.cpp" />
@@ -106,10 +107,11 @@
     <ClInclude Include="..\..\src\fm\logic\storage\disc\std\file\property\name.hpp" />
     <ClInclude Include="..\..\src\fm\logic\storage\disc\std\file\property\property.hpp" />
     <ClInclude Include="..\..\src\fm\logic\storage\disc\std\file\property\size.hpp" />
+    <ClInclude Include="..\..\src\fm\logic\storage\disc\windows\device\property\capacity.hpp" />
     <ClInclude Include="..\..\src\fm\logic\storage\disc\windows\device\property\folder.hpp" />
     <ClInclude Include="..\..\src\fm\logic\storage\disc\windows\device\property\name.hpp" />
+    <ClInclude Include="..\..\src\fm\logic\storage\disc\windows\device\property\occupied.hpp" />
     <ClInclude Include="..\..\src\fm\logic\storage\disc\windows\device\property\property.hpp" />
-    <ClInclude Include="..\..\src\fm\logic\storage\disc\windows\device\property\size.hpp" />
     <ClInclude Include="..\..\src\fm\logic\storage\disc\windows\file\property\name.hpp" />
     <ClInclude Include="..\..\src\fm\logic\storage\disc\windows\file\property\property.hpp" />
     <ClInclude Include="..\..\src\fm\logic\storage\disc\windows\file\property\size.hpp" />

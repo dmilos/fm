@@ -1,8 +1,14 @@
+
 #include <filesystem>
 
 #include "../device.hpp"
 
+#include "../../pure/property/generic.hpp"
+
+
 #include "./device/property/property.hpp"
+
+#include "type/ptr/make.hpp"
 
 #include "../file.hpp"
 
@@ -10,7 +16,16 @@ using namespace ::fileM::logic::storage::disc;
 
 device_class::device_class( manager_dumb_ptr_type const& manager_param, string_type const& name_param )
  {
-  // TODO
+  using namespace ::fileM::logic::storage::pure::property;
+  using namespace ::fileM::logic::storage::disc::windows::device::property;
+
+  insert(  "default-current-folder",   item_type( ::memory::pointer::make( generic_class<string_type>{ "c:\\" } ) ) );
+  insert(  "default-filename-pattern", item_type( ::memory::pointer::make( generic_class<string_type>{ "*.*" } ) ) );
+
+  insert(  "name",       item_type( ::memory::pointer::make(     name_class{  this,  name_param } ) ) );
+  insert(  "capacity",   item_type( ::memory::pointer::make( capacity_class{  this } ) ) );
+  insert(  "occupied",   item_type( ::memory::pointer::make( occupied_class{  this } ) ) );
+
  }
 
 device_class::~device_class()
@@ -63,14 +78,15 @@ device_class::list( file_list_type & list, filter_type const& filter_param, size
 
   if( false == ::reflection::property::inspect::check< string_type const& >( folder_property ) )
    {
+    // TODO "default-current-folder"
     return 0;
    }
   string_type const& folder = ::reflection::property::inspect::present< string_type const& >( folder_property );
 
-
   ::reflection::property::pure_class const& name_property = filter_param.get( "name" ); 
   if( false == ::reflection::property::inspect::check< string_type const& >( name_property ) )
    {
+    // TODO "default-filename-pattern"
     return 0;
    }
   string_type const& name = ::reflection::property::inspect::present< string_type const& >( name_property );
@@ -90,7 +106,7 @@ device_class::list( file_list_type & list, filter_type const& filter_param, size
 
   while( true )
    {
-    auto file = file_pointer_type{ new ::fileM::logic::storage::disc::file_class{ this,  ffd.cFileName } };
+    auto file = file_pointer_type{ new ::fileM::logic::storage::disc::file_class{ this, ffd.cFileName } };
 
     if( false == filter_param.match( *file ) )
      {

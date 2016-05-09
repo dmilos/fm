@@ -1,3 +1,4 @@
 #include "./folder.hpp"
 #include "./name.hpp"
-#include "./size.hpp"
+#include "./capacity.hpp"
+#include "./occupied.hpp"

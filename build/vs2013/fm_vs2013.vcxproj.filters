@@ -191,15 +191,6 @@
     <ClCompile Include="..\..\src\fm\logic\storage\disc\windows\file\property\size.cpp">
       <Filter>Source Files\logic\storage\disc\windows\file\property</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\src\fm\logic\storage\disc\windows\device\property\folder.cpp">
-      <Filter>Source Files\logic\storage\disc\windows\device\property</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\fm\logic\storage\disc\windows\device\property\name.cpp">
-      <Filter>Source Files\logic\storage\disc\windows\device\property</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\fm\logic\storage\disc\windows\device\property\size.cpp">
-      <Filter>Source Files\logic\storage\disc\windows\device\property</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\src\fm\logic\storage\disc\std\file\property\name.cpp">
       <Filter>Source Files\logic\storage\disc\std\file\property</Filter>
     </ClCompile>
@@ -214,6 +205,18 @@
     </ClCompile>
     <ClCompile Include="..\..\src\fm\logic\storage\disc\std\device\property\size.cpp">
       <Filter>Source Files\logic\storage\disc\std\device\property</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\fm\logic\storage\disc\windows\device\property\capacity.cpp">
+      <Filter>Source Files\logic\storage\disc\windows\device\property</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\fm\logic\storage\disc\windows\device\property\folder.cpp">
+      <Filter>Source Files\logic\storage\disc\windows\device\property</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\fm\logic\storage\disc\windows\device\property\name.cpp">
+      <Filter>Source Files\logic\storage\disc\windows\device\property</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\fm\logic\storage\disc\windows\device\property\occupied.cpp">
+      <Filter>Source Files\logic\storage\disc\windows\device\property</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -346,18 +349,6 @@
     <ClInclude Include="..\..\src\fm\logic\storage\disc\windows\file\property\size.hpp">
       <Filter>Source Files\logic\storage\disc\windows\file\property</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\src\fm\logic\storage\disc\windows\device\property\folder.hpp">
-      <Filter>Source Files\logic\storage\disc\windows\device\property</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\fm\logic\storage\disc\windows\device\property\name.hpp">
-      <Filter>Source Files\logic\storage\disc\windows\device\property</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\fm\logic\storage\disc\windows\device\property\property.hpp">
-      <Filter>Source Files\logic\storage\disc\windows\device\property</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\fm\logic\storage\disc\windows\device\property\size.hpp">
-      <Filter>Source Files\logic\storage\disc\windows\device\property</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\src\fm\logic\storage\disc\std\file\property\name.hpp">
       <Filter>Source Files\logic\storage\disc\std\file\property</Filter>
     </ClInclude>
@@ -378,6 +369,21 @@
     </ClInclude>
     <ClInclude Include="..\..\src\fm\logic\storage\disc\std\device\property\size.hpp">
       <Filter>Source Files\logic\storage\disc\std\device\property</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\fm\logic\storage\disc\windows\device\property\capacity.hpp">
+      <Filter>Source Files\logic\storage\disc\windows\device\property</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\fm\logic\storage\disc\windows\device\property\folder.hpp">
+      <Filter>Source Files\logic\storage\disc\windows\device\property</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\fm\logic\storage\disc\windows\device\property\name.hpp">
+      <Filter>Source Files\logic\storage\disc\windows\device\property</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\fm\logic\storage\disc\windows\device\property\occupied.hpp">
+      <Filter>Source Files\logic\storage\disc\windows\device\property</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\fm\logic\storage\disc\windows\device\property\property.hpp">
+      <Filter>Source Files\logic\storage\disc\windows\device\property</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

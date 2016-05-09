@@ -31,7 +31,6 @@ int main( int argc, char *argv[] )
 
 //filter.insert( "folder", ::reflection::object::structure_class<>::item_type( ::memory::pointer::make( ::reflection::property::inspect::simple( ::fileM::type::string_type("/home/dex") ) ) ) );
   filter.insert( "folder", ::reflection::object::structure_class<>::item_type( ::memory::pointer::make( ::reflection::property::inspect::simple( ::fileM::type::string_type("c:\\work") ) ) ) );
-
   filter.insert( "name", ::reflection::object::structure_class<>::item_type( ::memory::pointer::make( ::reflection::property::inspect::simple( ::fileM::type::string_type("*.*") ) ) ) );
 
   d.list( list, filter, 2, 5 );

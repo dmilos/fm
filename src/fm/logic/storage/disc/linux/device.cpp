@@ -1,7 +1,6 @@
 
 #include <dirent.h>
 
-
 #include "../device.hpp"
 
 #include "./device/property/property.hpp"
@@ -15,15 +14,18 @@ using namespace ::fileM::logic::storage::disc;
 device_class::device_class( manager_dumb_ptr_type const& manager_param, string_type const& name_param )
  : pure_type( manager_param )
  {
+  using namespace ::fileM::logic::storage;
   using namespace ::fileM::logic::storage::disc::linux::device::property;
 
-  insert(  "name",   item_type( ::memory::pointer::make(   name_class{  this,  name_param } ) ) );
-  insert(  "folder", item_type( ::memory::pointer::make( folder_class{  this,  "/home" } ) ) );
-  insert(  "size",   item_type( ::memory::pointer::make(   size_class{  this } ) ) );
+  insert(  "default-current-folder",   item_type( ::memory::pointer::make( pure::property::generic_class<string_type >{  this,  "/home" } ) ) );
+  insert(  "default-filename-pattern", item_type( ::memory::pointer::make( pure::property::generic_class<string_type >{  this,  "*.*" } ) ) );
+
+  insert(  "name",       item_type( ::memory::pointer::make(     name_class{  this,  name_param } ) ) );
+  //insert(  "capacity",   item_type( ::memory::pointer::make( capacity_class{  this } ) ) );
+  //insert(  "occupied",   item_type( ::memory::pointer::make( occupied_class{  this } ) ) );
 
     //insert( "mode",   mode{    this } );
     //insert( "gid",    gid{     this } );
-    //insert( "size",   size{    this } );
     //insert( "noexec", noexec{  this } );
     //insert( "nosuid", nosuid{  this } );
     //insert( "nodev",  nodev{   this } );
@@ -76,7 +78,8 @@ device_class::list
   ,size_type const& size
  )
  {
-  auto folder_iter = filter_param.find( "folder" ); if( folder_iter == filter_param.end() ) { return 0; }
+  auto folder_iter = filter_param.find( "folder" ); if( folder_iter == filter_param.end() ) {return 0; }
+
   string_type const& folder = ::reflection::property::inspect::present< string_type const& >( dynamic_cast< ::reflection::property::pure_class const&> ( *(folder_iter->second) ) );
 
   auto name_iter = filter_param.find( "name" ); if( name_iter == filter_param.end() ) { return 0; }
