@@ -5,3 +5,4 @@
 #include "./pattern/pattern.hpp"
 #include "./pattern.hpp"
 #include "./filter.hpp"
+#include "./scheme.hpp"

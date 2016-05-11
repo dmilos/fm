@@ -74,22 +74,22 @@ device_class::size()
 device_class::size_type
 device_class::list( file_list_type & list, filter_type const& filter_param, size_type const& begin_param, size_type const& size_param )
  {
-  ::reflection::property::pure_class const& folder_property = filter_param.get( "folder" ); 
+  auto name_iterator = filter_param.container().find( "name" );
+  if( filter_param.container().end() == name_iterator  )
+   {
+    // TODO "default-file-pattern"
+    return 0;
+   }
+  string_type const& name = ::reflection::property::inspect::present< string_type const& >( dynamic_cast< ::reflection::property::pure_class const& >( *name_iterator->second ) );
 
-  if( false == ::reflection::property::inspect::check< string_type const& >( folder_property ) )
+  auto folder_iterator = filter_param.container().find( "folder" );
+  if( filter_param.container().end() == folder_iterator  )
    {
     // TODO "default-current-folder"
     return 0;
    }
-  string_type const& folder = ::reflection::property::inspect::present< string_type const& >( folder_property );
+   string_type const& folder = ::reflection::property::inspect::present< string_type const& >( dynamic_cast< ::reflection::property::pure_class const& >( *folder_iterator->second ) );
 
-  ::reflection::property::pure_class const& name_property = filter_param.get( "name" ); 
-  if( false == ::reflection::property::inspect::check< string_type const& >( name_property ) )
-   {
-    // TODO "default-filename-pattern"
-    return 0;
-   }
-  string_type const& name = ::reflection::property::inspect::present< string_type const& >( name_property );
 
   string_type file_pattern = folder + "\\" + name;
 

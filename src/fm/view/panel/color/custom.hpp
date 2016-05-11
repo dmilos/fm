@@ -27,13 +27,16 @@ namespace fileM
             typedef ::fileM::type::color_type   color_type;
             typedef ::fileM::logic::storage::pure::filter_class       filter_type;
 
-            typedef std::map< filter_type, color_type > container_type;
+            //typedef std::map< filter_type, color_type > container_type;
 
             custom_class();
            ~custom_class();
 
+            bool              set( filter_type const& filter_param, color_type const& color_param );
+            color_type const& get( filter_type const& filter_param )const;
 
-           container_type m_container;
+          public:
+          // container_type m_container;
         };
 
        }

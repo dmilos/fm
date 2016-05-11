@@ -3,8 +3,6 @@
 
 // ::fileM::logic::storage::pure::filter_class
 
-#include "reflection/reflection.hpp"
-
 #include "../../../type/string.hpp"
 #include "./pattern.hpp"
 #include "./file.hpp"
@@ -19,16 +17,13 @@ namespace fileM
        {
 
         class filter_class
-         : public ::reflection::object::structure_class<> 
          {
           public:
-           typedef ::reflection::object::structure_class<>         structure_type;
-
            typedef ::fileM::type::string_type                         string_type;
            typedef ::fileM::logic::storage::pure::file_class            file_type;
            typedef ::fileM::logic::storage::pure::pattern_class      pattern_type;
 
-           typedef std::shared_ptr< ::fileM::logic::storage::pure::pattern_class> pointer_type;  //!< TODO
+           typedef std::shared_ptr< pattern_type > pointer_type;  //!< TODO, shared_ptr is OK.
 
            typedef std::map< string_type, pointer_type > container_type;
 
@@ -55,7 +50,6 @@ namespace fileM
             }
 
           public:
-            using structure_type::insert;
             void insert( string_type const& name_param, pattern_type * pattern_param )
              {
               m_container.emplace( name_param, pointer_type{ pattern_param } );
@@ -69,7 +63,6 @@ namespace fileM
             container_type m_container;
 
           public:
-
          };
 
        }

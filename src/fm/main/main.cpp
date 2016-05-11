@@ -16,6 +16,8 @@ void p()
 
 int main( int argc, char *argv[] )
  {
+  using namespace ::fileM::type;
+
   std::cout << "Hello World" << std::endl;
 
   ::fileM::logic::storage::disc::device_class d;
@@ -29,9 +31,8 @@ int main( int argc, char *argv[] )
 
   ::fileM::logic::storage::pure::filter_class filter;
 
-//filter.insert( "folder", ::reflection::object::structure_class<>::item_type( ::memory::pointer::make( ::reflection::property::inspect::simple( ::fileM::type::string_type("/home/dex") ) ) ) );
-  filter.insert( "folder", ::reflection::object::structure_class<>::item_type( ::memory::pointer::make( ::reflection::property::inspect::simple( ::fileM::type::string_type("c:\\work") ) ) ) );
-  filter.insert( "name", ::reflection::object::structure_class<>::item_type( ::memory::pointer::make( ::reflection::property::inspect::simple( ::fileM::type::string_type("*.*") ) ) ) );
+  filter.insert( "name",   ::memory::pointer::make( ::fileM::logic::storage::pure::pattern::simple_class<::fileM::type::string_type >( string_type{ "name"},   string_type{  "*.*"     } ) ) );
+  filter.insert( "folder", ::memory::pointer::make( ::fileM::logic::storage::pure::pattern::simple_class<::fileM::type::string_type >( string_type{ "folder"}, string_type{ "c:\\work" } ) ) );
 
   d.list( list, filter, 2, 5 );
 
