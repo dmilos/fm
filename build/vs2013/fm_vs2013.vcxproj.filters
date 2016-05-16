@@ -111,6 +111,9 @@
     <Filter Include="Source Files\logic\storage\disc\std\device\property">
       <UniqueIdentifier>{c6d2febf-2d5c-4672-b17f-09ccdfc8ff3e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\view\main">
+      <UniqueIdentifier>{53ba58d5-98a9-4734-815a-1dad519923d5}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="readme.txt" />

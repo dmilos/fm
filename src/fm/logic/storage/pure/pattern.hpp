@@ -20,18 +20,25 @@ namespace fileM
 
            typedef ::fileM::logic::storage::pure::file_class         file_type;
 
-         public:
-           explicit pattern_class()
-            {
-            }
-
-           virtual ~pattern_class()
-            {
-            }
-
-         public:
-           virtual bool match( file_type const& )const=0;
-
+           public:
+             explicit pattern_class()
+              {
+              }
+           
+             virtual ~pattern_class()
+              {
+              }
+           
+           public:
+             virtual bool match( file_type const& )const=0;
+           
+           // ??? public:
+           // ???           string_type    const& name()const{ return  m_name; }
+           // ???   virtual bool                  name( string_type const& name_param ){  m_name = name_param; return bool( true ); }
+           // ??? protected:
+           // ???   string_type        &  name(){ return  m_name; }
+           // ??? private:
+           // ???   string_type  m_name;
          };
 
        }

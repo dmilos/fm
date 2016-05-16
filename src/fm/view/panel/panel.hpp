@@ -31,6 +31,8 @@ namespace fileM
        ~panel_class();
 
      public:
+       //::fileM::view::panel::look_class         m_look;
+
        ::fileM::logic::storage::pure::filter_class     m_filter;
 
        ::fileM::view::panel::cursor_class         m_cursor;

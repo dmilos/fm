@@ -24,7 +24,7 @@ namespace fileM
           template< typename type_name >
            class simple_class
             : public ::fileM::logic::storage::pure::pattern::generic_class< type_name >
-            , public ::reflection::content::guarded::simple_class< type_name, type_name const&, type_name const&, bool>::typedef_type
+            , public ::reflection::content::guarded::simple_struct< type_name, type_name const&, type_name const&, bool>::typedef_type
              {
               public:
                 typedef type_name type_type;
@@ -33,7 +33,7 @@ namespace fileM
 
                typedef typename generic_type::string_type string_type;
 
-               typedef typename ::reflection::content::guarded::simple_class< type_name, type_name const&, type_name const&, bool>::typedef_type reflection_content_type;
+               typedef typename ::reflection::content::guarded::simple_struct< type_name, type_name const&, type_name const&, bool>::typedef_type reflection_content_type;
 
                 simple_class( string_type const& name_param, type_type const& value_param )
                  :generic_type( name_param, [this]( type_name const & value_param ){ return value_param == this->reflection_content_type::present(); } )
